@@ -1,8 +1,10 @@
-
+import React from "react";
+import PreLoader from "./components/preloader/PreLoader";
 function App() {
-  return (   
+  return (
     <>
-    Hello MFs
+      <PreLoader />
+      Hello MFs
     </>
   );
 }
