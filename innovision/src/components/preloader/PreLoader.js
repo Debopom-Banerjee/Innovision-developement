@@ -10,8 +10,8 @@ const PreLoader = () => {
     <>
       <div className="preloader">
         <div className="preload-container">
-          <span>Think,</span>
-          <span>Create,</span>
+          <span>Think.</span>
+          <span>Create.</span>
           <span>Innovate.</span>
         </div>
       </div>
