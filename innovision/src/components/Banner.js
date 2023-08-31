@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
+import logo2 from "../assets/img/logo2.png";
 import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 //import 'animate.css';
@@ -79,6 +79,11 @@ export const Banner = () => {
                   <button onClick={() => console.log("register")}>
                     Register Now <ArrowRightCircle size={27} />
                   </button>
+                  <span>
+                    <a href="https://www.rcciit.org/">
+                      <img src={logo2} alt="RCCIIT" />
+                    </a>
+                  </span>
                 </div>
               )}
             </TrackVisibility>

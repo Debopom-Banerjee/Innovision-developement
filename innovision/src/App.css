@@ -93,7 +93,7 @@ p.danger {
 }
 /************ Navbar Css ************/
 nav.navbar {
-  padding: 18px 0;
+  padding: 10px 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -111,7 +111,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
   letter-spacing: 0.8px;
-  padding: 0 25px;
+  padding: 0 20px;
   font-size: 18px;
   opacity: 0.75;
 }
@@ -249,7 +249,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
 }
 .banner .tagline {
-  font-weight: 700;
+  font-weight: 750;
   letter-spacing: 0.8px;
   padding: 8px 10px;
   background: linear-gradient(
@@ -258,25 +258,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     rgba(74, 47, 189, 0.5) 111.58%
   );
   border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 20px;
+  font-size: 55px;
   margin-bottom: 16px;
   display: inline-block;
 }
 .banner h2 {
-  font-size: 50px;
-  font-weight: 450;
+  font-size: 40px;
+  font-weight: 600;
   letter-spacing: 0.7px;
   line-height: 1;
   margin-bottom: 20px;
   display: block;
 }
-.banner p {
-  color: #b8b8b8;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  width: 96%;
-}
+
 .banner button {
   color: #fff;
   font-weight: 700;
@@ -311,4 +305,43 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
+}
+/************ Gallery Css ************/
+.gallery {
+  padding: 0 0 50px 0;
+  position: relative;
+}
+.gallery-bx {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+}
+.gallery h2 {
+  font-size: 45px;
+  font-weight: 700;
+}
+.gallery p {
+  color: #b8b8b8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
+}
+.gallery-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.gallery-slider .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
 }
