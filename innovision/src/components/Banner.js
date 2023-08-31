@@ -11,7 +11,7 @@ export const Banner = () => {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
-    const toRotate = ["CSE Department's", "Annual Departmental", "Fest of"];
+    const toRotate = ["Annual Departmental Fest of CSE"];
     const period = 2000;
 
     useEffect(() => {
@@ -56,7 +56,7 @@ export const Banner = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span className="tagline">INNOVISION 2K23</span>
-                                    <h2>{`Presenting our`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "CSE Departments", "Annual Departmental", "Fest of" ]'><span className="wrap">{text}</span></span></h2>
+                                    <h2>{`Presenting our`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Annual Departmental Fest of CSE" ]'><span className="wrap">{text}</span></span></h2>
 
                                     <button onClick={() => console.log('register')}>Register Now <ArrowRightCircle size={27} /></button>
                                 </div>}
