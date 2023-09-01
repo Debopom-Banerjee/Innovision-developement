@@ -8,65 +8,65 @@ export const Events = () => {
 
     const TechEvents = [
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Innovion 2023",
+            description: "Sept 7-8",
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Innovion 2023",
+            description: "Sept 7-8",
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Innovion 2023",
+            description: "Sept 7-8",
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Innovion 2023",
+            description: "Sept 7-8",
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Innovion 2023",
+            description: "Sept 7-8",
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Innovion 2023",
+            description: "Sept 7-8",
             imgUrl: projImg1,
         },
     ];
     const NontechEvents = [
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Innovion 2023",
+            description: "Sept 7-8",
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Innovion 2023",
+            description: "Sept 7-8",
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Innovion 2023",
+            description: "Sept 7-8",
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Innovion 2023",
+            description: "Sept 7-8",
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Innovion 2023",
+            description: "Sept 7-8",
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Innovion 2023",
+            description: "Sept 7-8",
             imgUrl: projImg1,
         },
     ];
@@ -80,7 +80,7 @@ export const Events = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <h2>EVENTS</h2>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <p>Click on any event from technical as well as non-technical domains and register for fun and thrill. Best of Luck!! </p>
                                     <Tab.Container id="event-tabs" defaultActiveKey="first">
                                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                             <Nav.Item>
