@@ -5,6 +5,7 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 //import 'animate.css';
 import TrackVisibility from "react-on-screen";
+import { signInWithGoogleRedirect } from "../config/firebase";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -52,6 +53,14 @@ export const Banner = () => {
     }
   };
 
+  const handleGoogleSignin = async () => {
+    try {
+      await signInWithGoogleRedirect();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -76,7 +85,7 @@ export const Banner = () => {
                     </span>
                   </h2>
 
-                  <button onClick={() => console.log("register")}>
+                  <button onClick={handleGoogleSignin}>
                     Register Now <ArrowRightCircle size={27} />
                   </button>
                   <span>
