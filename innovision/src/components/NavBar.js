@@ -4,16 +4,17 @@ import logo from "../assets/img/logo.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
-import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
 import { UserContext } from "../context/User.context";
 import { signOutUser } from "../config/firebase";
+import { signInWithGoogleRedirect } from "../config/firebase";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
   const { currUser } = useContext(UserContext);
+  console.log(currUser);
 
   useEffect(() => {
     const onScroll = () => {
@@ -35,6 +36,14 @@ export const NavBar = () => {
 
   const signOutHandler = async () => {
     await signOutUser();
+  };
+
+  const handleGoogleSignin = async () => {
+    try {
+      await signInWithGoogleRedirect();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -114,11 +123,9 @@ export const NavBar = () => {
                 </a>
               </div>
               {!currUser ? (
-                <HashLink to="#register">
-                  <button className="vvd">
-                    <span>Register Now</span>
-                  </button>
-                </HashLink>
+                <button className="vvd" onClick={handleGoogleSignin}>
+                  <span>Sign In / Sign Up</span>
+                </button>
               ) : (
                 <button onClick={signOutHandler}>
                   <span>Sign Out</span>
