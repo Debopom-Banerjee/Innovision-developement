@@ -69,7 +69,7 @@ export const Banner = () => {
                     {`Presenting our`}{" "}
                     <span
                       className="txt-rotate"
-                      dataPeriod="2000"
+                      dataPeriod="4000"
                       data-rotate='[ "Annual Departmental Fest of CSE" ]'
                     >
                       <span className="wrap">{text}</span>
@@ -77,11 +77,14 @@ export const Banner = () => {
                   </h2>
 
                   <button>
-                    Register Now <ArrowRightCircle size={27} />
+                    Register Now{" "}
+                    <a href="#events">
+                      <ArrowRightCircle size={27} />
+                    </a>
                   </button>
                   <span>
                     <a href="https://www.rcciit.org/">
-                      <img src={logo2} alt="RCCIIT" />
+                      <img className="logo" src={logo2} alt="RCCIIT" />
                     </a>
                   </span>
                 </div>

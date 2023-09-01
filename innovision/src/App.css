@@ -281,6 +281,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
 }
 .banner button svg {
+  color: #fff;
   font-size: 25px;
   margin-left: 10px;
   transition: 0.3s ease-in-out;
