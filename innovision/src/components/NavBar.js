@@ -14,7 +14,8 @@ export const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
 
     const { currUser } = useContext(UserContext);
-    console.log(currUser);
+    // console.log(currUser);
+    // console.log("profile email is", currUser.email);
 
     useEffect(() => {
         const onScroll = () => {
@@ -127,9 +128,12 @@ export const NavBar = () => {
                                     <span>Sign In / Sign Up</span>
                                 </button>
                             ) : (
-                                <button onClick={signOutHandler}>
-                                    <span>Sign Out</span>
-                                </button>
+                                <div className="flex flex-row justify-around items-center">
+                                    <button onClick={signOutHandler}>
+                                        <span>Sign Out</span>
+                                    </button>
+                                    <img src={`${currUser.photoURL}`} className="profile-pic" />
+                                </div>
                             )}
                         </span>
                     </Navbar.Collapse>

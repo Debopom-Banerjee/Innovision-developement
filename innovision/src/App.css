@@ -161,6 +161,12 @@ span.navbar-text {
   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
     hue-rotate(346deg) brightness(95%) contrast(86%);
 }
+.profile-pic {
+  width: 20%;
+  height: 20%;
+  z-index: 1;
+  border-radius: 100%;
+}
 .navbar-text button {
   font-weight: 700;
   color: #fff;

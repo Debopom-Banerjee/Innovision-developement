@@ -13,15 +13,15 @@ export const UserProvider = ({ children }) => {
   const value = { currUser, setCurrUser };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChangedListener(async (user) => {
+    onAuthStateChangedListener(async (user) => {
       if (user) {
         await createUserDocFromAuth(user);
       }
       setCurrUser(user);
       console.log(user);
+      console.log("user email and pic", user.email, user.photoURL);
     });
 
-    return unsubscribe;
   }, []);
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
