@@ -19,7 +19,7 @@ export const UserProvider = ({ children }) => {
       }
       setCurrUser(user);
       console.log(user);
-      console.log("user email and pic", user.email, user.photoURL);
+      // console.log("user email and pic", user.email, user.photoURL);
     });
 
   }, []);
