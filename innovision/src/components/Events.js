@@ -27,7 +27,7 @@ export const Events = () => {
             title: "Tech C",
             description: "Sept 7-8",
             imgUrl: techC,
-            
+
         },
         {
             title: "Codathon",
@@ -67,8 +67,8 @@ export const Events = () => {
             imgUrl: art_wall,
             description: <a href="https://github.com/Sansrita/SBH-PROJECT">
                 <button>Click me</button>
-                </a>,
-            
+            </a>,
+
         },
         {
             title: "Article",
@@ -95,7 +95,7 @@ export const Events = () => {
             description: "Sept 7-8",
             imgUrl: quiz,
         },
-        
+
         {
             title: "ReelLens",
             description: "Sept 7-8",
@@ -106,12 +106,7 @@ export const Events = () => {
             description: "Sept 7-8",
             imgUrl: Spell_Bee,
         },
-        {
-            title: "Spell Bee",
-            description: "Sept 7-8",
-            imgUrl: Spell_Bee,
-        },
-        
+
     ];
 
     return (
