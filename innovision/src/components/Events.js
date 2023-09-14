@@ -1,74 +1,117 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import projImg1 from "../assets/img/logo.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import art_wall from "../assets/img/art_wall.jpeg";
+import article from "../assets/img/article_wall.jpeg";
+import poetry from "../assets/img/poetry_wall.jpeg";
+import shutterbugs from "../assets/img/shutterbugs.jpeg";
+import extempore from "../assets/img/extempore.png";
+import reel from "../assets/img/reel.png";
+import quiz from "../assets/img/Quiz.png";
+import codathon from "../assets/img/codathon.png";
+import techC from "../assets/img/techC.png";
+import webify from "../assets/img/webify.png";
+import ctf from "../assets/img/ctf.png";
+import hackathon from "../assets/img/hackathon.png";
+import bgmi from "../assets/img/bgmi.png";
+import valorant from "../assets/img/valo.png";
+import Spell_Bee from "../assets/img/Spell_Bee.jpg";
 import TrackVisibility from 'react-on-screen';
 import { EventCard } from "./EventCard";
+
 
 export const Events = () => {
 
     const TechEvents = [
         {
-            title: "Innovion 2023",
+            title: "Tech C",
             description: "Sept 7-8",
-            imgUrl: projImg1,
+            imgUrl: techC,
+            
         },
         {
-            title: "Innovion 2023",
+            title: "Codathon",
             description: "Sept 7-8",
-            imgUrl: projImg1,
+            imgUrl: codathon,
         },
         {
-            title: "Innovion 2023",
+            title: "Webify",
             description: "Sept 7-8",
-            imgUrl: projImg1,
+            imgUrl: webify,
         },
         {
-            title: "Innovion 2023",
+            title: "CTF",
             description: "Sept 7-8",
-            imgUrl: projImg1,
+            imgUrl: ctf,
         },
         {
-            title: "Innovion 2023",
+            title: "Hackathon",
             description: "Sept 7-8",
-            imgUrl: projImg1,
+            imgUrl: hackathon,
         },
         {
-            title: "Innovion 2023",
+            title: "BGMI",
             description: "Sept 7-8",
-            imgUrl: projImg1,
+            imgUrl: bgmi,
+        },
+        {
+            title: "Valorant",
+            description: "Sept 7-8",
+            imgUrl: valorant,
         },
     ];
     const NontechEvents = [
         {
-            title: "Innovion 2023",
+            title: "Artwork",
             description: "Sept 7-8",
-            imgUrl: projImg1,
+            imgUrl: art_wall,
+            description: <a href="https://github.com/Sansrita/SBH-PROJECT">
+                <button>Click me</button>
+                </a>,
+            
         },
         {
-            title: "Innovion 2023",
+            title: "Article",
             description: "Sept 7-8",
-            imgUrl: projImg1,
+            imgUrl: article,
         },
         {
-            title: "Innovion 2023",
+            title: "Poetry",
             description: "Sept 7-8",
-            imgUrl: projImg1,
+            imgUrl: poetry,
         },
         {
-            title: "Innovion 2023",
+            title: "Shutterbugs",
             description: "Sept 7-8",
-            imgUrl: projImg1,
+            imgUrl: shutterbugs,
         },
         {
-            title: "Innovion 2023",
+            title: "Extempore",
             description: "Sept 7-8",
-            imgUrl: projImg1,
+            imgUrl: extempore,
         },
         {
-            title: "Innovion 2023",
+            title: "QuizTime",
             description: "Sept 7-8",
-            imgUrl: projImg1,
+            imgUrl: quiz,
         },
+        
+        {
+            title: "ReelLens",
+            description: "Sept 7-8",
+            imgUrl: reel,
+        },
+        {
+            title: "Spell Bee",
+            description: "Sept 7-8",
+            imgUrl: Spell_Bee,
+        },
+        {
+            title: "Spell Bee",
+            description: "Sept 7-8",
+            imgUrl: Spell_Bee,
+        },
+        
     ];
 
     return (

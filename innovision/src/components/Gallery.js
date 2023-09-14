@@ -5,6 +5,11 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
+import quiz1 from "../assets/img/webify_pic.JPG";
+import quiz2 from "../assets/img/quiz1_pic.JPG";
+import codathon1 from "../assets/img/codathon_pic.JPG";
+import codathon from "../assets/img/codathon1_pic.JPG";
+import spellbee from "../assets/img/spellbee_pic.JPG";
 import colorSharp from "../assets/img/color-sharp.png"
 
 export const Gallery = () => {
@@ -38,19 +43,19 @@ export const Gallery = () => {
 
                             <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme gallery-slider">
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
+                                    <img src={quiz1} alt="Image" />
 
                                 </div>
                                 <div className="item">
-                                    <img src={meter2} alt="Image" />
+                                    <img src={codathon1} alt="Image" />
 
                                 </div>
                                 <div className="item">
-                                    <img src={meter3} alt="Image" />
+                                    <img src={codathon} alt="Image" />
 
                                 </div>
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
+                                    <img src={spellbee} alt="Image" />
 
                                 </div>
                             </Carousel>
