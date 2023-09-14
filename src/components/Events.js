@@ -106,6 +106,11 @@ export const Events = () => {
             description: "Sept 7-8",
             imgUrl: Spell_Bee,
         },
+        {
+            title: "Spell Bee",
+            description: "Sept 7-8",
+            imgUrl: Spell_Bee,
+        },
         
     ];
 
