@@ -27,37 +27,50 @@ export const Events = () => {
             title: "Tech C",
             description: "Sept 7-8",
             imgUrl: techC,
-
+            isGroupEvent: false,
+            collection: "TechC"
         },
         {
             title: "Codathon",
             description: "Sept 7-8",
             imgUrl: codathon,
+            isGroupEvent: false,
+            collection: "Codathon"
         },
         {
             title: "Webify",
             description: "Sept 7-8",
             imgUrl: webify,
+            isGroupEvent: false,
+            collection: "Webify"
         },
         {
             title: "CTF",
             description: "Sept 7-8",
             imgUrl: ctf,
+            isGroupEvent: false,
+            collection: "ctf"
         },
         {
             title: "Hackathon",
             description: "Sept 7-8",
             imgUrl: hackathon,
+            isGroupEvent: true,
+            collection: "hackathon"
         },
         {
             title: "BGMI",
             description: "Sept 7-8",
             imgUrl: bgmi,
+            isGroupEvent: true,
+            collection: "bgmi"
         },
         {
             title: "Valorant",
             description: "Sept 7-8",
             imgUrl: valorant,
+            isGroupEvent: true,
+            collection: "valorant"
         },
     ];
     const NontechEvents = [
@@ -68,43 +81,58 @@ export const Events = () => {
             description: <a href="https://github.com/Sansrita/SBH-PROJECT">
                 <button>Click me</button>
             </a>,
-
+            isGroupEvent: false,
+            collection: "TheWall"
         },
         {
             title: "Article",
             description: "Sept 7-8",
             imgUrl: article,
+            isGroupEvent: false,
+            collection: "Article"
         },
         {
             title: "Poetry",
             description: "Sept 7-8",
             imgUrl: poetry,
+            isGroupEvent: false,
+            collection: "Poetry"
         },
         {
             title: "Shutterbugs",
             description: "Sept 7-8",
             imgUrl: shutterbugs,
+            isGroupEvent: false,
+            collection: "ShutterBug"
         },
         {
             title: "Extempore",
             description: "Sept 7-8",
             imgUrl: extempore,
+            isGroupEvent: false,
+            collection: "Extempore",
         },
         {
             title: "QuizTime",
             description: "Sept 7-8",
             imgUrl: quiz,
+            isGroupEvent: true,
+            collection: "quiz"
         },
 
         {
             title: "ReelLens",
             description: "Sept 7-8",
             imgUrl: reel,
+            isGroupEvent: false,
+            collection: "ReelLens"
         },
         {
             title: "Spell Bee",
             description: "Sept 7-8",
             imgUrl: Spell_Bee,
+            isGroupEvent: false,
+            collection: "Spellbee"
         },
 
     ];
