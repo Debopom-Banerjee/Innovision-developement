@@ -13,61 +13,67 @@ export const Forms = () => {
     console.log(name, value);
     setUserRegistration({ ...userRegistration, [name]: value });
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newRecord = { ...userRegistration };
+  };
 
   return (
     <>
-      <form action="">
-        <div>
-          <label htmlFor="name">FullName:</label>
-          <input
-            type="text"
-            value={userRegistration.name}
-            onChange={handleInput}
-            name="name"
-            id="name"
-          />
+      <form action="" onSubmit={handleSubmit} id="forms" className="form">
+        <div className="labels">
+          <div>
+            <label htmlFor="name">FullName:</label>
+            <input
+              type="text"
+              value={userRegistration.name}
+              onChange={handleInput}
+              name="name"
+              id="name"
+            />
+          </div>
+          <div>
+            <label htmlFor="year">Year:</label>
+            <input
+              type="text"
+              value={userRegistration.year}
+              onChange={handleInput}
+              name="year"
+              id="year"
+            />
+          </div>
+          <div>
+            <label htmlFor="collegeroll">College RollNo.:</label>
+            <input
+              type="text"
+              value={userRegistration.collegeroll}
+              onChange={handleInput}
+              name="collegeroll"
+              id="collegeroll"
+            />
+          </div>
+          <div>
+            <label htmlFor="phone">Phone Number:</label>
+            <input
+              type="number"
+              value={userRegistration.phone}
+              onChange={handleInput}
+              name="phone"
+              id="phone"
+            />
+          </div>
+          <div>
+            <label htmlFor="email">Email Id:</label>
+            <input
+              type="email"
+              value={userRegistration.email}
+              onChange={handleInput}
+              name="email"
+              id="email"
+            />
+          </div>
+          <button type="submit"> Register Now</button>
         </div>
-        <div>
-          <label htmlFor="year">Year:</label>
-          <input
-            type="text"
-            value={userRegistration.year}
-            onChange={handleInput}
-            name="year"
-            id="year"
-          />
-        </div>
-        <div>
-          <label htmlFor="collegeroll">College RollNo.:</label>
-          <input
-            type="text"
-            value={userRegistration.collegeroll}
-            onChange={handleInput}
-            name="collegeroll"
-            id="collegeroll"
-          />
-        </div>
-        <div>
-          <label htmlFor="phone">Phone Number:</label>
-          <input
-            type="number"
-            value={userRegistration.phone}
-            onChange={handleInput}
-            name="phone"
-            id="phone"
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email Id:</label>
-          <input
-            type="email"
-            value={userRegistration.email}
-            onChange={handleInput}
-            name="email"
-            id="email"
-          />
-        </div>
-        <button type="submit"> Register Now</button>
       </form>
     </>
   );

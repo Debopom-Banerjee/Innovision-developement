@@ -6,16 +6,16 @@ import { NavBar } from "./components/NavBar";
 import { Banner } from "./components/Banner";
 import { Gallery } from "./components/Gallery";
 import { Events } from "./components/Events";
+
 function App() {
   return (
     <>
-      <PreLoader />
       <div className="App">
+        <PreLoader />
         <NavBar />
         <Banner />
         <Gallery />
         <Events />
-
       </div>
     </>
   );

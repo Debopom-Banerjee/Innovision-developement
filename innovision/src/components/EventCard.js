@@ -6,7 +6,9 @@ export const EventCard = ({ title, description, imgUrl }) => {
       <div className="event-imgbx">
         <img src={imgUrl} />
         <button className="button">
-          <span>Register Now</span>
+          <a href="#forms">
+            <span>Register Now</span>
+          </a>
         </button>
         {/* <button className="button2">
           <span>Guidelines</span>
