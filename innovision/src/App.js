@@ -6,7 +6,8 @@ import { NavBar } from "./components/NavBar";
 import { Banner } from "./components/Banner";
 import { Gallery } from "./components/Gallery";
 import { Events } from "./components/Events";
-import Forms from "./components/Forms";
+import { Footer } from "./components/Footer";
+import { Contact } from "./components/Contact";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Banner />
         <Gallery />
         <Events />
-        <Forms />
+        <Contact />
+        <Footer />
       </div>
     </>
   );
