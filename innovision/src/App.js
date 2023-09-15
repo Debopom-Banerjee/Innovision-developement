@@ -17,7 +17,6 @@ function App() {
         <Banner />
         <Gallery />
         <Events />
-        <Forms />
       </div>
     </>
   );

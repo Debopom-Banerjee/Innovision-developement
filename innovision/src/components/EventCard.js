@@ -5,9 +5,9 @@ import { signInWithGoogleRedirect } from "../config/firebase";
 import Modal from "./Modal";
 
 export const EventCard = ({ title, description, imgUrl }) => {
-
-  const { currUser, modalState, setModalState } = useContext(UserContext);
+  const { currUser } = useContext(UserContext);
   // const { modalState, setModalState } = useContext(UserContext);
+  const [modalState1, setModalState1] = useState(false);
 
   const handleGoogleSignin = async () => {
     try {
@@ -18,28 +18,29 @@ export const EventCard = ({ title, description, imgUrl }) => {
   };
 
   const OpenModal = () => {
-    console.log(modalState)
-    setModalState(true)
-  }
+    setModalState1(true);
+    console.log(modalState1);
+  };
 
   return (
     <Col size={12} sm={6} md={4}>
       <div className="event-imgbx">
-        <img src={imgUrl} />
-        {
-          !currUser ? (
-            <button className="button" onClick={handleGoogleSignin}>
-              <span className=" font-semibold">Sign In / Sign Up</span>
-            </button>
-          ) : (
-            <button className="button" onClick={OpenModal}>
-              <span className=" font-semibold">Register Now</span>
-              {/* <Modal modalState={modalState} /> */}
-            </button>
-
-          )
-        }
-        <Modal />
+        <img src={imgUrl} alt="img" />
+        {!currUser ? (
+          <button className="button" onClick={handleGoogleSignin}>
+            <span className=" font-semibold">Sign In / Sign Up</span>
+          </button>
+        ) : (
+          <button className="button" onClick={OpenModal}>
+            <span className=" font-semibold">Register Now</span>
+            {/* <Modal modalState={modalState} /> */}
+          </button>
+        )}
+        <Modal
+          modalState1={modalState1}
+          setModalState1={setModalState1}
+          title={title}
+        />
         <div className="event-txtx">
           <h4>{title}</h4>
           <span>{description}</span>
@@ -48,4 +49,3 @@ export const EventCard = ({ title, description, imgUrl }) => {
     </Col>
   );
 };
-
