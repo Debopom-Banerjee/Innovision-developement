@@ -8,9 +8,9 @@ export const EventCard = ({ title, description, imgUrl }) => {
         <button className="button">
           <span>Register Now</span>
         </button>
-        <button className="button2">
+        {/* <button className="button2">
           <span>Guidelines</span>
-        </button>
+        </button> */}
         <div className="event-txtx">
           <h4>{title}</h4>
           <span>{description}</span>
