@@ -18,7 +18,6 @@ function App() {
         <Banner />
         <Gallery />
         <Events />
-        <Forms />
         <Contact />
         <Footer />
       </div>
