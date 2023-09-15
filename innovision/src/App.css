@@ -583,3 +583,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: absolute;
   transform: translate(-70%, +100%);
 }
+.coordinators .techteam {
+  color: #b8b8b8;
+  justify-content: space-between;
+  text-align: center;
+}
