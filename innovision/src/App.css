@@ -440,10 +440,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #aa367c;
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   color: #fff;
   padding: 10px 20px;
-  border: none;
+  border: 1px solid white;
   border-radius: 5px;
   cursor: pointer;
   opacity: 0;
@@ -451,7 +451,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .event-imgbx:hover img {
-  filter: brightness(40%);
+  filter: brightness(30%);
   /* background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%); */
   /* Adjust the filter effect as desired */
 }

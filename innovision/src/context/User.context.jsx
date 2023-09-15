@@ -10,7 +10,10 @@ export const UserContext = createContext({
 
 export const UserProvider = ({ children }) => {
   const [currUser, setCurrUser] = useState(null);
-  const value = { currUser, setCurrUser };
+  
+  const [modalState, setModalState] = useState(false);
+  
+  const value = { currUser, setCurrUser, modalState, setModalState };
 
   useEffect(() => {
     onAuthStateChangedListener(async (user) => {
