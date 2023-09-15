@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import logo2 from "../assets/img/logo2.png";
+import logo3 from "../assets/img/logo3.png";
 import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-//import 'animate.css';
+import 'animate.css';
 import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
@@ -75,17 +75,17 @@ export const Banner = () => {
                       <span className="wrap">{text}</span>
                     </span>
                   </h2>
-                  {/* <span>
-                    <a href="https://www.rcciit.org/">
-                      <img className="logo" src={logo2} alt="NBA" />
-                    </a>
-                  </span> */}
                   <button>
                     Register Now{" "}
                     <a href="#events">
                       <ArrowRightCircle size={27} />
                     </a>
                   </button>
+                  <span>
+                    <a href="https://www.nbaind.org/">
+                      <img className="logo" src={logo3} alt="NBA" />
+                    </a>
+                  </span>
                 </div>
               )}
             </TrackVisibility>
