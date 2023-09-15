@@ -70,23 +70,22 @@ export const Banner = () => {
                     <span
                       className="txt-rotate"
                       dataPeriod="8000"
-                      data-rotate='[ "Annual Departmental Fest of CSE" ]'
+                      data-rotate='[ "Annual Departmental Fest of" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h2>
-
+                  {/* <span>
+                    <a href="https://www.rcciit.org/">
+                      <img className="logo" src={logo2} alt="NBA" />
+                    </a>
+                  </span> */}
                   <button>
                     Register Now{" "}
                     <a href="#events">
                       <ArrowRightCircle size={27} />
                     </a>
                   </button>
-                  <span>
-                    <a href="https://www.rcciit.org/">
-                      <img className="logo" src={logo2} alt="RCCIIT" />
-                    </a>
-                  </span>
                 </div>
               )}
             </TrackVisibility>
