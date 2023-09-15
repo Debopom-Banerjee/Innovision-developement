@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { addToSingleEvent } from "../config/firebase";
+import { UserContext } from "../context/User.context";
 
 // import { collection, addDoc } from "firebase/firestore";
 // import { db } from "../../Config/Firebase";
@@ -11,14 +13,14 @@ const schema = yup
   .object()
   .shape({
     name: yup.string().required("This is a required field"),
-    personal_email: yup.string().email().required("This is a required field"),
     year: yup.string().required("This is a required field"),
     college_roll: yup.string().required("This is a required field"),
     mobile_no: yup.string().required("This is a required field"),
+    department: yup.string().required("This is a required field"),
   })
   .required();
 
-function Forms() {
+function Forms({ title, setModalState1 }) {
   const {
     register,
     handleSubmit,
@@ -26,149 +28,65 @@ function Forms() {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  const { currUser } = useContext(UserContext);
+  console.log(currUser);
+  const submitForm = async (data) => {
+    const { name, mobile_no, college_roll, year, department } = data;
+    const email = currUser.email;
+    const eventName = title.replace(/ /g, "").toLowerCase();
+    try {
+      await addToSingleEvent(currUser, eventName, {
+        name,
+        mobile_no,
+        college_roll,
+        year,
+        department,
+        email,
+      });
+    } catch (e) {
+      console.log(e);
+    }
+    setModalState1(false);
+  };
 
   return (
-    <div>
-      <div className="col mb-4">
-        <div className="card shadow-sm">
-          <div className="card-body d-flex flex-column align-items-center">
-            <p className="card-text">
-              <h4>
-                {" "}
-                Click the button below to add club members details in the member
-                section
-              </h4>
-            </p>
-            <div className="d-flex justify-content-between align-items-center">
-              <div className="btn-group">
-                <button
-                  type="button"
-                  className="btn btn-primary btn-lg"
-                  data-bs-toggle="modal"
-                  data-bs-target="#AddMember"
-                >
-                  Add Member Details
-                </button>
-                {/* <!-- Modal --> */}
-                <div
-                  className="modal fade"
-                  id="AddMember"
-                  data-bs-backdrop="static"
-                  data-bs-keyboard="false"
-                  tabindex="-1"
-                  aria-labelledby="staticBackdropLabel"
-                  aria-hidden="true"
-                >
-                  <div className="modal-dialog">
-                    <div className="modal-content">
-                      <div className="modal-header">
-                        <h1
-                          className="modal-title fs-5"
-                          id="staticBackdropLabel"
-                        >
-                          RCCTechz Member Information Collection
-                        </h1>
-                        <button
-                          type="button"
-                          className="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div className="modal-body">
-                        <form
-                          onSubmit={handleSubmit((d) => {
-                            console.log(d);
-                            // addMember(
-                            //   d.name,
-                            //   d.personal_email,
-                            //   d.year,
-                            //   d.college_roll,
-                            //   d.mobile_no
-                            // );
-                            alert("Members details are collected");
-                          })}
-                        >
-                          <h1 className="h3 mb-3 fw-normal">
-                            Add Details about the club-member here
-                          </h1>
-                          <div className="form-floating mt-3">
-                            <input
-                              type="text"
-                              className="form-control"
-                              id="floatingInput"
-                              placeholder="name@example.com"
-                              {...register("name")}
-                            />
-                            <label htmlFor="floatingInput">Full Name</label>
-                            <p>{errors.name?.message}</p>
-                          </div>
-                          <div className="form-floating mt-3">
-                            <input
-                              type="e-mail"
-                              className="form-control"
-                              id="floatingTimeAndDate"
-                              placeholder="Password"
-                              {...register("personal_email")}
-                            />
-                            <label htmlFor="floatingPassword">
-                              Personal E-mail ID
-                            </label>
-                            <p>{errors.personal_email?.message}</p>
-                          </div>
-                          <div className="form-floating mt-3">
-                            <input
-                              type="text"
-                              className="form-control"
-                              id="floatingTimeAndDate"
-                              placeholder="Password"
-                              {...register("year")}
-                            />
-                            <label htmlFor="floatingPassword">Year:</label>
-                            <p>{errors.year?.message}</p>
-                          </div>
-                          <div className="form-floating mt-3">
-                            <input
-                              type="text"
-                              className="form-control"
-                              id="floatingTimeAndDate"
-                              placeholder="Password"
-                              {...register("college_roll")}
-                            />
-                            <label htmlFor="floatingPassword">
-                              College Roll No:
-                            </label>
-                            <p>{errors.college_roll?.message}</p>
-                          </div>
-                          <div className="form-floating mt-3">
-                            <input
-                              type="text"
-                              className="form-control"
-                              id="floatingTimeAndDate"
-                              placeholder="Password"
-                              {...register("mobile_no")}
-                            />
-                            <label htmlFor="floatingPassword">Mobile No:</label>
-                            <p>{errors.mobile_no?.message}</p>
-                          </div>
-                          <div className="mt-4 mb-3 d-flex flex-row align-items-center justify-content-center">
-                            <button
-                              className="w-50 btn btn-lg btn-primary"
-                              type="submit"
-                            >
-                              Add Member details
-                            </button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="text-black ">
+      <form onSubmit={handleSubmit(submitForm)} className="flex row gap-1">
+        <h4 className="text-base">Enter details for {title}</h4>
+        <input
+          className="p-2 border border-black rounded-lg"
+          type="name"
+          placeholder="Name"
+          {...register("name")}
+        />
+        {errors.name && <span>name required</span>}
+        <input
+          placeholder="mobile no."
+          {...register("mobile_no")}
+          className="p-2 border border-black rounded-lg"
+        />
+        <input
+          placeholder="College roll no."
+          {...register("college_roll")}
+          className="p-2 border border-black rounded-lg"
+        />
+        <input
+          placeholder="year"
+          {...register("year")}
+          className="p-2 border border-black rounded-lg"
+        />
+        <input
+          placeholder="department"
+          {...register("department")}
+          className="p-2 border border-black rounded-lg"
+        />
+        <button
+          type="submit"
+          className="mt-3 inline-flex justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto absolute bottom-4 right-32 w-auto"
+        >
+          submit
+        </button>
+      </form>
     </div>
   );
 }

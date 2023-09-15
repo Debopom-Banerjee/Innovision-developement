@@ -1,12 +1,18 @@
 import { initializeApp } from "firebase/app";
 import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  updateDoc,
+} from "firebase/firestore";
+import {
   getAuth,
   GoogleAuthProvider,
   signInWithRedirect,
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA46fcqDtt-r8XLmSP_tLSDmBgWuK7Lflo",
@@ -58,6 +64,29 @@ export const createUserDocFromAuth = async (userAuth, aditionalInfo = {}) => {
 
 export const onAuthStateChangedListener = (callback) => {
   onAuthStateChanged(auth, callback);
+};
+
+export const addToSingleEvent = async (userAuth, eventName, studentDetails) => {
+  const eventsRef = doc(db, eventName, userAuth.uid);
+  const eventSnapshot = await getDoc(eventsRef);
+  if (eventSnapshot.exists()) {
+    try {
+      await updateDoc(eventsRef, {
+        ...studentDetails,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  } else {
+    try {
+      await setDoc(eventsRef, {
+        ...studentDetails,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  return eventsRef;
 };
 
 export default app;
