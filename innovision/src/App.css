@@ -428,18 +428,49 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
   margin-bottom: 24px;
 }
-.event-imgbx::before {
+
+.event-imgbx img {
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.event-imgbx .button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.event-imgbx:hover img {
+  filter: brightness(40%);
+  /* background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%); */
+  /* Adjust the filter effect as desired */
+}
+
+.event-imgbx:hover .button {
+  opacity: 1;
+}
+/* .event-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
   height: 0;
-  transition: 0.4s ease-in-out;
+  transition: filter 0.3s, transform 0.3s;
 }
 .event-imgbx:hover::before {
   height: 100%;
-}
+} */
 .event-txtx {
   position: absolute;
   text-align: center;
@@ -450,6 +481,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   opacity: 0;
   width: 100%;
 }
+
+
 .event-imgbx:hover .proj-txtx {
   top: 50%;
   opacity: 1;
