@@ -7,7 +7,8 @@ import Modal from "./Modal";
 export const EventCard = ({ title, description, imgUrl }) => {
 
     const { currUser, modalState, setModalState } = useContext(UserContext);
-    
+    // const { modalState, setModalState } = useContext(UserContext);
+
     const handleGoogleSignin = async () => {
         try {
             await signInWithGoogleRedirect();
@@ -16,10 +17,12 @@ export const EventCard = ({ title, description, imgUrl }) => {
         }
     };
 
-    const OpenModal = () => {
-        console.log(modalState)
-        setModalState(true)
-    }
+    // const [modalState, setModalState] = useState(false)
+
+  const OpenModal = () => {
+    console.log(modalState)
+    setModalState(true)
+  }
 
     return (
         <Col size={12} sm={6} md={4}>
