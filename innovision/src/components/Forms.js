@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const Forms = () => {
+export const Forms = () => {
   const [userRegistration, setUserRegistration] = useState({
     name: "",
     year: "",

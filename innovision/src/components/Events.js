@@ -78,9 +78,6 @@ export const Events = () => {
             title: "Artwork",
             description: "Sept 7-8",
             imgUrl: art_wall,
-            description: <a href="https://github.com/Sansrita/SBH-PROJECT">
-                <button>Click me</button>
-            </a>,
             isGroupEvent: false,
             collection: "TheWall"
         },
