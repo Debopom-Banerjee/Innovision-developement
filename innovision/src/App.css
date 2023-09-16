@@ -207,6 +207,10 @@ nav.navbar .navbar-toggler:focus {
   outline: none;
   box-shadow: none;
 }
+/* .logo-img {
+  height: 60px;
+  width: 600px;
+} */
 nav.navbar .navbar-toggler-icon {
   width: 24px;
   height: 17px;

@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
-import logo2 from "../assets/img/logo2.png";
+import logo2 from "../assets/img/logo2.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
@@ -53,7 +53,7 @@ export const NavBar = () => {
             <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
                 <Container>
                     <Navbar.Brand href="https://www.rcciit.org/">
-                        <img src={logo2} alt="Logo" className="object-fill h-20 w-200" />
+                        <img src={logo2} alt="Logo" className="logo-img" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav">
                         <span className="navbar-toggler-icon"></span>
