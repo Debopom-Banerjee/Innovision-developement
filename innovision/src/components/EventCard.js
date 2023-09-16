@@ -3,11 +3,13 @@ import { Col } from "react-bootstrap";
 import { UserContext } from "../context/User.context";
 import { signInWithGoogleRedirect } from "../config/firebase";
 import Modal from "./Modal";
+import ModalRules from "./ModalRules";
 
 export const EventCard = ({ title, description, imgUrl }) => {
   const { currUser } = useContext(UserContext);
   // const { modalState, setModalState } = useContext(UserContext);
   const [modalState1, setModalState1] = useState(false);
+  const [modalRules, setModalRules] = useState(false);
 
     const handleGoogleSignin = async () => {
         try {
@@ -23,6 +25,9 @@ export const EventCard = ({ title, description, imgUrl }) => {
     setModalState1(true);
     console.log(modalState1);
   };
+  const openRules = () => {
+    setModalRules(true);
+  };
 
   return (
     <Col size={12} sm={6} md={4}>
@@ -35,9 +40,12 @@ export const EventCard = ({ title, description, imgUrl }) => {
         ) : (
           <button className="button" onClick={OpenModal}>
             <span className=" font-semibold">Register Now</span>
-            {/* <Modal modalState={modalState} /> */}
           </button>
         )}
+        <button className="button !top-2/3" onClick={openRules}>
+          <span className=" font-semibold">Rules</span>
+        </button>
+        {/* <ModalRules modelState1={modalRules} setModalState1={modalRules} /> */}
         <Modal
           modalState1={modalState1}
           setModalState1={setModalState1}
