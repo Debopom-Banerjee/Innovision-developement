@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { UserContext } from "../context/User.context";
 import { addToSingleEvent } from "../config/firebase";
+import toast from "react-hot-toast";
 
 // import { collection, addDoc } from "firebase/firestore";
 // import { db } from "../../Config/Firebase";
@@ -36,6 +37,12 @@ function Groupform({ title, setModalState1 }) {
   const { fields, append, remove } = useFieldArray({
     control,
     name: "participants",
+    rules: {
+      required: {
+        value: true,
+        name_message: "At least one is required",
+      },
+    },
   });
 
   const { currUser } = useContext(UserContext);
@@ -45,7 +52,21 @@ function Groupform({ title, setModalState1 }) {
       await addToSingleEvent(currUser, eventName, {
         ...data,
       });
+      toast.success("Form submitted Successfully!!!", {
+        duration: 4000,
+        className: "text-white",
+        style: {
+          background: "#d11aff",
+        },
+      });
     } catch (e) {
+      toast.error("Error please check Form again.", {
+        duration: 4000,
+        className: "text-white",
+        style: {
+          background: "#ff6666",
+        },
+      });
       console.log(e);
     }
     setModalState1(false);
@@ -54,54 +75,73 @@ function Groupform({ title, setModalState1 }) {
 
   return (
     <div className="max-h-[400px] overflow-y-auto">
-      <h4 className="text-3xl mb-1 text-purple-500 p-3 uppercase">Enter details for {title}</h4>
-      <form onSubmit={handleSubmit(submitForm)} className="flex row gap-1 px-8 pb-4">
+      <h4 className="text-3xl mb-1 text-purple-500 p-3 uppercase">
+        Enter details for {title}
+      </h4>
+      <form
+        onSubmit={handleSubmit(submitForm)}
+        className="flex row gap-1 px-8 pb-4"
+      >
         {fields.map((item, index) => (
           <>
             <div key={index}>
-              <p className="text-xl mb-1 text-purple-500 p-3 uppercase">Member {index + 1} details</p>
+              <p className="text-xl mb-1 text-purple-500 p-3 uppercase">
+                Member {index + 1} details
+              </p>
               <input
                 type="text"
                 placeholder={`Team Member ${index + 1} Name`}
                 {...register(`participants.${index}.name`)}
                 className="p-2 px-5 border mb-2 border-white rounded-lg !bg-transparent"
               />
-              {errors.name && <span className="text-red-600">Name required</span>}
+              {errors.participants?.[index]?.name && (
+                <span className="text-red-600 ml-3">Name required</span>
+              )}
               <input
                 type="text"
                 placeholder={`Team Member ${index + 1} Email`}
                 {...register(`participants.${index}.personal_email`)}
                 className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
               />
-              {errors.personal_email && <span className="text-red-600">Email required</span>}
+              {errors.participants?.[index]?.personal_email && (
+                <span className="text-red-600 ml-3">Email required</span>
+              )}
               <input
                 type="text"
                 placeholder={`Team Member ${index + 1} Mobile no.`}
                 {...register(`participants.${index}.mobile_no`)}
                 className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
               />
-              {errors.mobile_no && <span className="text-red-600">Mobile no. required</span>}
+              {errors.participants?.[index]?.mobile_no && (
+                <span className="text-red-600 ml-3">Mobile no. required</span>
+              )}
               <input
                 type="text"
                 placeholder={`Team Member ${index + 1} Roll no.`}
                 {...register(`participants.${index}.college_roll`)}
                 className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
               />
-              {errors.college_roll && <span className="text-red-600">College Roll required</span>}
+              {errors.participants?.[index]?.college_roll && (
+                <span className="text-red-600 ml-3">College Roll required</span>
+              )}
               <input
                 type="text"
                 placeholder={`Team Member ${index + 1} Year`}
                 {...register(`participants.${index}.year`)}
                 className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
               />
-              {errors.year && <span className="text-red-600">Year required</span>}
+              {errors.participants?.[index]?.year && (
+                <span className="text-red-600 ml-3">Year required</span>
+              )}
               <input
                 type="text"
                 placeholder={`Member ${index + 1} Department`}
                 {...register(`participants.${index}.department`)}
                 className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
               />
-              {errors.department && <span className="text-red-600">Department required</span>}
+              {errors.participants?.[index]?.department && (
+                <span className="text-red-600 ml-3">Department required</span>
+              )}
               <button
                 className="text-white border-[5px] px-8 py-2 rounded-xl bg-red-700 hover:bg-red-300"
                 type="button"
