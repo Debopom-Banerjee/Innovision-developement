@@ -1,9 +1,9 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import projImg1 from "../assets/img/logo.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import art_wall from "../assets/img/art_wall.jpeg";
-import article from "../assets/img/article_wall.jpeg";
-import poetry from "../assets/img/poetry_wall.jpeg";
+import art_wall from "../assets/img/art_wall.png";
+import article from "../assets/img/article_wall.png";
+import poetry from "../assets/img/poetry_wall.png";
 import shutterbugs from "../assets/img/shutterbugs.jpeg";
 import extempore from "../assets/img/extempore.png";
 import reel from "../assets/img/reel.png";

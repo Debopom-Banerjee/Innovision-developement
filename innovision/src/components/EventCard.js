@@ -11,15 +11,15 @@ export const EventCard = ({ title, description, imgUrl }) => {
   const [modalState1, setModalState1] = useState(false);
   const [modalRules, setModalRules] = useState(false);
 
-    const handleGoogleSignin = async () => {
-        try {
-            await signInWithGoogleRedirect();
-        } catch (error) {
-            console.log(error);
-        }
-    };
+  const handleGoogleSignin = async () => {
+    try {
+      await signInWithGoogleRedirect();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-    // const [modalState, setModalState] = useState(false)
+  // const [modalState, setModalState] = useState(false)
 
   const OpenModal = () => {
     setModalState1(true);
@@ -43,7 +43,7 @@ export const EventCard = ({ title, description, imgUrl }) => {
           </button>
         )}
         <button className="button !top-2/3" onClick={openRules}>
-          <span className=" font-semibold">Rules</span>
+          <span className=" font-semibold">Guidelines</span>
         </button>
         {/* <ModalRules modelState1={modalRules} setModalState1={modalRules} /> */}
         <Modal
