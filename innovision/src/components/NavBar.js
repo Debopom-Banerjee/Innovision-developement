@@ -53,7 +53,7 @@ export const NavBar = () => {
             <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
                 <Container>
                     <Navbar.Brand href="https://www.rcciit.org/">
-                        <img src={logo2} alt="Logo" />
+                        <img src={logo2} alt="Logo" className="object-fill h-20 w-200" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav">
                         <span className="navbar-toggler-icon"></span>
