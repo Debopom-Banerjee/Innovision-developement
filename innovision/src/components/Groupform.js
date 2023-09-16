@@ -55,7 +55,7 @@ function Groupform({ title, setModalState1 }) {
   return (
     <div className="max-h-[400px] overflow-y-auto">
       <h4 className="text-3xl mb-1 text-purple-500 p-3 uppercase">Enter details for {title}</h4>
-      <form onSubmit={handleSubmit(submitForm)}>
+      <form onSubmit={handleSubmit(submitForm)} className="flex row gap-1 px-8 pb-4">
         {fields.map((item, index) => (
           <>
             <div key={index}>
@@ -64,46 +64,46 @@ function Groupform({ title, setModalState1 }) {
                 type="text"
                 placeholder={`Team Member ${index + 1} Name`}
                 {...register(`participants.${index}.name`)}
-                className="p-2 border mb-2 border-white rounded-lg !bg-transparent"
+                className="p-2 px-5 border mb-2 border-white rounded-lg !bg-transparent"
               />
               {errors.name && <span className="text-red-600">Name required</span>}
               <input
                 type="text"
                 placeholder={`Team Member ${index + 1} Email`}
                 {...register(`participants.${index}.personal_email`)}
-                className="p-2 border mb-2  border-white rounded-lg !bg-transparent"
+                className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
               />
               {errors.personal_email && <span className="text-red-600">Email required</span>}
               <input
                 type="text"
                 placeholder={`Team Member ${index + 1} Mobile no.`}
                 {...register(`participants.${index}.mobile_no`)}
-                className="p-2 border mb-2  border-white rounded-lg !bg-transparent"
+                className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
               />
               {errors.mobile_no && <span className="text-red-600">Mobile no. required</span>}
               <input
                 type="text"
-                placeholder={`Team Member ${index + 1} College roll no.`}
+                placeholder={`Team Member ${index + 1} Roll no.`}
                 {...register(`participants.${index}.college_roll`)}
-                className="p-2 border mb-2  border-white rounded-lg !bg-transparent"
+                className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
               />
               {errors.college_roll && <span className="text-red-600">College Roll required</span>}
               <input
                 type="text"
                 placeholder={`Team Member ${index + 1} Year`}
                 {...register(`participants.${index}.year`)}
-                className="p-2 border mb-2  border-white rounded-lg !bg-transparent"
+                className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
               />
               {errors.year && <span className="text-red-600">Year required</span>}
               <input
                 type="text"
-                placeholder={`Team Member ${index + 1} Department`}
+                placeholder={`Member ${index + 1} Department`}
                 {...register(`participants.${index}.department`)}
-                className="p-2 border mb-2  border-white rounded-lg !bg-transparent"
+                className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
               />
               {errors.department && <span className="text-red-600">Department required</span>}
               <button
-                className="text-white border-[5px] px-4 py-2 rounded-xl bg-red-700 hover:bg-red-300"
+                className="text-white border-[5px] px-8 py-2 rounded-xl bg-red-700 hover:bg-red-300"
                 type="button"
                 onClick={() => remove(index)}
               >
