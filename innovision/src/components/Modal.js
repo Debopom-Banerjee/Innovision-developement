@@ -5,17 +5,34 @@ import { UserContext } from "../context/User.context";
 import Forms from "./Forms";
 import Groupform from "./Groupform";
 export default function Modal({ modalState1, setModalState1, title }) {
-  //   const { modalState, setModalState } = useContext(UserContext);
+  // const [isFormVisible, setFormVisible] = useState(false);
   const checkMultipleEvent = (str) => {
     const title1 = str.replace(/ /g, "").toLowerCase();
     const ismultipleEvents = /valorant|bgmi|quiztime|hackathon/.test(title1);
     return ismultipleEvents;
   };
+  const checkGoogleFormEvent = (str) => {
+    const title1 = str.replace(/ /g, "").toLowerCase();
+    const isform = /shutterbugs|reellens|article|artwork|poetry/.test(title1);
+    return isform;
+  };
   //   const [newModalState, setNewModalState] = useState(true);
   const handleCloseModal = () => {
     setModalState1(false);
   };
-
+  // if (checkGoogleFormEvent(title)) {
+  //   setFormVisible(true);
+  // }
+  // const formEvents = [
+  //   {
+  //     reellens: "https://forms.gle/1hJubb9b2qNGKfBJ8",
+  //     shutterbugs: "https://forms.gle/1jCZvET9Kj4QJB919",
+  //     article: "https://forms.gle/J7NTXkPZ81jXGvfPA",
+  //     artnetwork: "https://forms.gle/RNVQybgAgfBisL9t8",
+  //     poetry: "https://forms.gle/ZQ62xYbPREes2UTFA",
+  //   },
+  // ];
+  // console.log(formEvents);
   const cancelButtonRef = useRef(null);
   return (
     <Transition.Root show={modalState1} as={Fragment}>

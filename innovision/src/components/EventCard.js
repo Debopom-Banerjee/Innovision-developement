@@ -5,7 +5,16 @@ import { signInWithGoogleRedirect } from "../config/firebase";
 import Modal from "./Modal";
 import ModalRules from "./ModalRules";
 
-export const EventCard = ({ title, description, imgUrl }) => {
+export const EventCard = ({
+  title,
+  description,
+  info,
+  imgUrl,
+  rules,
+  theme,
+  note,
+  coordinators,
+}) => {
   const { currUser } = useContext(UserContext);
   // const { modalState, setModalState } = useContext(UserContext);
   const [modalState1, setModalState1] = useState(false);
@@ -42,10 +51,22 @@ export const EventCard = ({ title, description, imgUrl }) => {
             <span className=" font-semibold">Register Now</span>
           </button>
         )}
-        <button className="button !top-2/3" onClick={openRules}>
-          <span className=" font-semibold">Guidelines</span>
+        <button
+          className="button !top-2/3 z-10 !cursor-pointer"
+          onClick={openRules}
+        >
+          <span className=" font-semibold !cursor-pointer">Guidelines</span>
         </button>
-        {/* <ModalRules modelState1={modalRules} setModalState1={modalRules} /> */}
+        <ModalRules
+          modalRules={modalRules}
+          setModalRules={setModalRules}
+          title={title}
+          info={info}
+          rules={rules}
+          theme={theme}
+          note={note}
+          coordinators={coordinators}
+        />
         <Modal
           modalState1={modalState1}
           setModalState1={setModalState1}
