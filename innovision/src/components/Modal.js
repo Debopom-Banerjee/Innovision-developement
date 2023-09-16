@@ -17,12 +17,11 @@ export default function Modal({ modalState1, setModalState1, title }) {
   };
 
   const cancelButtonRef = useRef(null);
-  console.log(modalState1);
   return (
     <Transition.Root show={modalState1} as={Fragment}>
       <Dialog
         as="div"
-        className="fixed inset-0 xs:px-0 md:px-8 py-3 overflow-y-auto max-h-screen z-[100000]"
+        className="fixed inset-0 xs:px-0 md:px-8 py-3 overflow-y-auto max-h-screen z-[100000] "
         initialFocus={cancelButtonRef}
         onClose={() => setModalState1(false)}
       >
@@ -50,17 +49,17 @@ export default function Modal({ modalState1, setModalState1, title }) {
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                <div className="bg-white px-4 pb-1 pt-1 sm:p-6 sm:pb-4 bg-[url('./assets/img/footer-bg.png')]">
                   {checkMultipleEvent(title) ? (
-                    <Groupform />
+                    <Groupform title={title} setModalState1={setModalState1} />
                   ) : (
                     <Forms title={title} setModalState1={setModalState1} />
                   )}
                 </div>
-                <div className="bg-gray-50 px-4 py-3 flex flex-row-reverse sm:px-6">
+                <div className="bg-[url('./assets/img/footer-bg.png')] px-4 py-1 pt-1.5 h-10 flex flex-row-reverse sm:px-6">
                   <button
                     type="button"
-                    className="mt-3 inline-flex w-auto justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                    className="mt-0 inline-flex w-auto justify-center rounded-md bg-red-700 px-3 py-2 text-sm font-semibold text-white-600 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-red-300"
                     onClick={handleCloseModal}
                     ref={cancelButtonRef}
                   >
