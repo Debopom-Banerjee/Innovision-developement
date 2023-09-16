@@ -13,7 +13,7 @@ export const Footer = () => {
             <img src={logo} alt="Logo" />
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
-            <div className="social-icon">
+            <div className="social-icon py-3">
               <a href="https://discord.gg/Sz7uAMyU">
                 <img src={navIcon1} alt="Discord" />
               </a>
