@@ -115,7 +115,7 @@ export const NavBar = () => {
                         <span className="navbar-text">
                             <div className="social-icon">
                                 <a href="https://discord.gg/Sz7uAMyU">
-                                    <img src={navIcon1} alt="LinkedIn" />
+                                    <img src={navIcon1} alt="Discord" />
                                 </a>
                                 <a href="https://www.facebook.com/innovisionrcc/">
                                     <img src={navIcon2} alt="Facebook" />
