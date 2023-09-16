@@ -8,6 +8,7 @@ import { Gallery } from "./components/Gallery";
 import { Events } from "./components/Events";
 import { Footer } from "./components/Footer";
 import { Contact } from "./components/Contact";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Events />
         <Contact />
         <Footer />
+        <Toaster position="top-center" reverseOrder={false} />
       </div>
     </>
   );
