@@ -17,7 +17,6 @@ export default function Modal({ modalState1, setModalState1, title }) {
   };
 
   const cancelButtonRef = useRef(null);
-  console.log(modalState1);
   return (
     <Transition.Root show={modalState1} as={Fragment}>
       <Dialog
@@ -52,7 +51,7 @@ export default function Modal({ modalState1, setModalState1, title }) {
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                 <div className="bg-white px-4 pb-1 pt-1 sm:p-6 sm:pb-4 bg-[url('./assets/img/footer-bg.png')]">
                   {checkMultipleEvent(title) ? (
-                    <Groupform />
+                    <Groupform title={title} setModalState1={setModalState1} />
                   ) : (
                     <Forms title={title} setModalState1={setModalState1} />
                   )}
