@@ -8,6 +8,7 @@ import { Gallery } from "./components/Gallery";
 import { Events } from "./components/Events";
 import { Footer } from "./components/Footer";
 import { Contact } from "./components/Contact";
+import Groupform from "./components/Groupform";
 
 function App() {
   return (

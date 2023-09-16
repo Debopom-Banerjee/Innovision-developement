@@ -29,7 +29,6 @@ function Forms({ title, setModalState1 }) {
     resolver: yupResolver(schema),
   });
   const { currUser } = useContext(UserContext);
-  console.log(currUser);
   const submitForm = async (data) => {
     const { name, mobile_no, college_roll, year, department } = data;
     const email = currUser.email;
