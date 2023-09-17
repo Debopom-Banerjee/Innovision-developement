@@ -62,6 +62,16 @@ function Forms({ title, setModalState1 }) {
     }
     setModalState1(false);
   };
+  const handleInputFocus = (e) => {
+    e.target.classList.add("focused");
+    e.target.classList.add("pt-3");
+  };
+  const handleInputBlur = (e) => {
+    if (e.target.value === "") {
+      e.target.classList.remove("focused");
+      e.target.classList.remove("pt-3");
+    }
+  };
 
   return (
     <div className=" ">
@@ -70,48 +80,73 @@ function Forms({ title, setModalState1 }) {
       </h4>
       <form
         onSubmit={handleSubmit(submitForm)}
-        className="flex row gap-1 px-8 pb-4"
+        className=" relative flex row gap-1 px-8 pb-4"
       >
-        <input
-          className="p-2 border mb-2 border-white rounded-lg !bg-transparent"
-          type="name"
-          placeholder="Name"
-          {...register("name")}
-        />
-        {errors.name && <span className="text-red-600">Name required</span>}
-        <input
-          placeholder="mobile no."
-          {...register("mobile_no")}
-          className="p-2 border mb-2  border-white rounded-lg !bg-transparent"
-        />
-        {errors.mobile_no && (
-          <span className="text-red-600">Mobile no. required</span>
-        )}
-        <input
-          placeholder="College roll no."
-          {...register("college_roll")}
-          className="p-2 border mb-2 border-white rounded-lg !bg-transparent"
-        />
-        {errors.college_roll && (
-          <span className="text-red-600">College Roll required</span>
-        )}
-        <input
-          placeholder="Academic year"
-          {...register("year")}
-          className="p-2  border mb-2 border-white rounded-lg !bg-transparent"
-        />
-        {errors.year && <span className="text-red-600">Year required</span>}
-        <input
-          placeholder="department"
-          {...register("department")}
-          className="p-2 border mb-2 border-white rounded-lg !bg-transparent"
-        />
-        {errors.department && (
-          <span className="text-red-600">Department required</span>
-        )}
+        <div className="field-container flex flex-col">
+          <input
+            className="p-2 px-3 border my-2 border-white rounded-lg !bg-transparent"
+            type="name"
+            onFocus={handleInputFocus}
+            {...register("name", {
+              onBlur: handleInputBlur,
+            })}
+          />
+          <label className="!left-7">Name</label>
+          {errors.name && <span className="text-red-600">Name required</span>}
+        </div>
+        <div className="field-container flex flex-col">
+          <input
+            onFocus={handleInputFocus}
+            {...register("mobile_no", {
+              onBlur: handleInputBlur,
+            })}
+            className="p-2 px-3 border my-2 border-white rounded-lg !bg-transparent"
+          />
+          <label className="!left-7">Mobile no.</label>
+          {errors.mobile_no && (
+            <span className="text-red-600">Mobile no. required</span>
+          )}
+        </div>
+        <div className="field-container flex flex-col">
+          <input
+            onFocus={handleInputFocus}
+            {...register("college_roll", {
+              onBlur: handleInputBlur,
+            })}
+            className="p-2 px-3 border my-2 border-white rounded-lg !bg-transparent"
+          />
+          <label className="!left-7">College roll no.</label>
+          {errors.college_roll && (
+            <span className="text-red-600">College Roll required</span>
+          )}
+        </div>
+        <div className="field-container flex flex-col">
+          <input
+            onFocus={handleInputFocus}
+            {...register("year", {
+              onBlur: handleInputBlur,
+            })}
+            className="p-2 px-2 !pl-4 border my-2 border-white rounded-lg !bg-transparent"
+          />
+          <label className="!left-7">Academic Year</label>
+          {errors.year && <span className="text-red-600">Year required</span>}
+        </div>
+        <div className="field-container flex flex-col">
+          <input
+            onFocus={handleInputFocus}
+            {...register("department", {
+              onBlur: handleInputBlur,
+            })}
+            className="p-2 px-3 border my-2 border-white rounded-lg !bg-transparent"
+          />
+          <label className="!left-7">Department</label>
+          {errors.department && (
+            <span className="text-red-600">Department required</span>
+          )}
+        </div>
         <button
           type="submit"
-          className="mt-3 inline-flex justify-center rounded-md  bg-gradient-to-r from-violet-500 to-fuchsia-500 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm ring-1 ring-inset focus:from-purple-800 focus:to-blue-950  sm:mt-0 sm:w-auto absolute bottom-1 right-32 w-auto "
+          className="mt-3 inline-flex justify-center rounded-md  bg-gradient-to-r from-violet-500 to-fuchsia-500 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm ring-1 ring-inset focus:from-purple-800 focus:to-blue-950  sm:mt-0 sm:w-auto absolute bottom-[-40px] right-32 w-auto "
         >
           Register
         </button>
