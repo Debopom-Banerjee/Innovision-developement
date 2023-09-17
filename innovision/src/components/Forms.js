@@ -96,7 +96,7 @@ function Forms({ title, setModalState1 }) {
           <span className="text-red-600">College Roll required</span>
         )}
         <input
-          placeholder="year"
+          placeholder="Academic year"
           {...register("year")}
           className="p-2  border mb-2 border-white rounded-lg !bg-transparent"
         />

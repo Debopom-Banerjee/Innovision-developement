@@ -135,7 +135,7 @@ function Groupform({ title, setModalState1 }) {
               )}
               <input
                 type="text"
-                placeholder={`Team Member ${index + 1} Year`}
+                placeholder={`Team Member ${index + 1} Academic Year`}
                 {...register(`participants.${index}.year`)}
                 className="p-2 px-5 border my-2  border-white rounded-lg !bg-transparent"
               />
