@@ -1,4 +1,3 @@
-import colorSharp2 from "../assets/img/color-sharp2.png";
 import art_wall from "../assets/img/art_wall.png";
 import article from "../assets/img/article_wall.png";
 import poetry from "../assets/img/poetry_wall.png";
@@ -10,11 +9,10 @@ import codathon from "../assets/img/codathon.png";
 import techC from "../assets/img/techC.png";
 import webify from "../assets/img/webify.png";
 import ctf from "../assets/img/ctf.png";
-import hackathon from "../assets/img/hackathon.png";
 import bgmi from "../assets/img/bgmi.png";
 import valorant from "../assets/img/valo.png";
 import Spell_Bee from "../assets/img/Spell_Bee.jpg";
-import TrackVisibility from "react-on-screen";
+
 
 export const TechEvents = [
   {
@@ -50,11 +48,6 @@ export const TechEvents = [
     title: "CTF",
     info: "1. The winner will be the first person to post the final flag in the designated flag text channel on Discord, and no other candidates will be considered for the winner position after that. \n  2. For this particular event, only one winner will be considered. \n  3. All of the challenges are designed such that you don't need specialized tools to solve them, just using tools available online will do the job. But, you are not prohibited from using specialized tools so feel free to use them if need be. \n  4. Sharing answers or hints for challenges amongst yourselves is highly discouraged because that harms the integrity of the event. \n  5. The first one to post the final flag on the dedicated discord text channel will be considered the winner, no candidate will be considered for the winner position thereafter. \n  6. If nobody manages to secure the final flag during the 24 hours time period, then the event will officially have no winners. \n  7. After the winner has been decided, you are still allowed to solve the challenges if you feel like it. \n  8. Summarizing rules for CTF: \n     Try to solve the CTF on your own \n     Do not post the answers of each level in a public forum or public chat...else you will be disqualified \n     only submit the final answer in the specified channel of discord \n     you are free to use the internet \n     In case of any dispute, the admin decision will be final.",
     imgUrl: ctf,
-    description: "Sept 7-8",
-  },
-  {
-    title: "Hackathon",
-    imgUrl: hackathon,
     description: "Sept 7-8",
   },
   {
