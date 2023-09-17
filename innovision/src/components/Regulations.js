@@ -123,9 +123,10 @@ export const NontechEvents = [
   },
   {
     title: "Extempore",
-    collection: "Extempore",
     imgUrl: extempore,
     description: "Sept 7-8",
+    coordinators:
+      "Coordinators: \n URBI CHAKROBORTY: 98753 92898 \n SUHANI SAHA: 84788 68744 \n SOUHARDDA RAJ SARKAR: 94776 32433 \n SHIBANGI CHATTERJEE: 87777 539361 \n KALPA DAS: 62902 71947",
   },
   {
     title: "QuizTime",
