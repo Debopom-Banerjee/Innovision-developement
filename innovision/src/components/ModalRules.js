@@ -73,6 +73,24 @@ export default function ModalRules({
                         );
                       })}
                   </p>
+                  {theme &&
+                    theme.split("\n").map((subStr, i) => {
+                      return (
+                        <Fragment key={i}>
+                          <span className="py-1.5">{subStr}</span>
+                          <br />
+                        </Fragment>
+                      );
+                    })}
+                  {note &&
+                    note.split("\n").map((subStr, i) => {
+                      return (
+                        <Fragment key={i}>
+                          <span className="py-1.5">{subStr}</span>
+                          <br />
+                        </Fragment>
+                      );
+                    })}
                   <p className="p-2">
                     {coordinators &&
                       coordinators.split("\n").map((subStr, i) => {
@@ -84,9 +102,6 @@ export default function ModalRules({
                         );
                       })}
                   </p>
-                  {theme && <p className="p-2">{theme}</p>}
-                  {note && <p className="p-2">{note}</p>}
-
                 </div>
                 <div className="bg-[url('./assets/img/footer-bg.png')] px-4 py-1 pt-1.5 h-10 flex flex-row-reverse sm:px-6">
                   <button
