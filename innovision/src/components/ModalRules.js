@@ -47,10 +47,22 @@ export default function ModalRules({
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                <div className="overflow-y-auto bg-white px-4 pb-1 pt-1 sm:p-6 sm:pb-4 bg-[url('./assets/img/footer-bg.png')]">
-                  <h3 className="text-3xl mb-1 text-purple-500 p-3 uppercase">Rules for {title}</h3>
+                <div className="overflow-y-auto max-h-[500px] bg-white px-4 pb-1 pt-1 sm:p-6 sm:pb-4 bg-[url('./assets/img/footer-bg.png')]">
+                  <h3 className="text-3xl mb-1 text-purple-500 p-3 uppercase">
+                    Rules for {title}
+                  </h3>
                   <p>{info}</p>
-                  <p>{rules}</p>
+                  <p>
+                    {rules &&
+                      rules.split("\n").map((subStr, i) => {
+                        return (
+                          <Fragment key={i}>
+                            {subStr}
+                            <br />
+                          </Fragment>
+                        );
+                      })}
+                  </p>
                   <p>{theme}</p>
                   <p>{note}</p>
                   <p>{coordinators}</p>
