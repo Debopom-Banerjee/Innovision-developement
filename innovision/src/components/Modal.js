@@ -4,7 +4,16 @@ import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import { UserContext } from "../context/User.context";
 import Forms from "./Forms";
 import Groupform from "./Groupform";
-export default function Modal({ modalState1, setModalState1, title }) {
+const formEvents = [
+  {
+    reellens: "https://forms.gle/1hJubb9b2qNGKfBJ8",
+    shutterbugs: "https://forms.gle/1jCZvET9Kj4QJB919",
+    article: "https://forms.gle/J7NTXkPZ81jXGvfPA",
+    artwork: "https://forms.gle/RNVQybgAgfBisL9t8",
+    poetry: "https://forms.gle/ZQ62xYbPREes2UTFA",
+  },
+];
+export default function Modal({ modalState1, setModalState1, title, hasForm }) {
   // const [isFormVisible, setFormVisible] = useState(false);
   const checkMultipleEvent = (str) => {
     const title1 = str.replace(/ /g, "").toLowerCase();
@@ -23,17 +32,8 @@ export default function Modal({ modalState1, setModalState1, title }) {
   // if (checkGoogleFormEvent(title)) {
   //   setFormVisible(true);
   // }
-  // const formEvents = [
-  //   {
-  //     reellens: "https://forms.gle/1hJubb9b2qNGKfBJ8",
-  //     shutterbugs: "https://forms.gle/1jCZvET9Kj4QJB919",
-  //     article: "https://forms.gle/J7NTXkPZ81jXGvfPA",
-  //     artnetwork: "https://forms.gle/RNVQybgAgfBisL9t8",
-  //     poetry: "https://forms.gle/ZQ62xYbPREes2UTFA",
-  //   },
-  // ];
-  // console.log(formEvents);
   const cancelButtonRef = useRef(null);
+  const formTitle = title.replace(/ /g, "").toLowerCase();
   return (
     <Transition.Root show={modalState1} as={Fragment}>
       <Dialog
@@ -67,10 +67,51 @@ export default function Modal({ modalState1, setModalState1, title }) {
             >
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                 <div className="bg-white px-4 pb-1 pt-1 sm:p-6 sm:pb-4 bg-[url('./assets/img/footer-bg.png')]">
-                  {checkMultipleEvent(title) ? (
+                  {checkMultipleEvent(title) && (
                     <Groupform title={title} setModalState1={setModalState1} />
-                  ) : (
+                  )}
+                  {!hasForm && !checkMultipleEvent(title) && (
                     <Forms title={title} setModalState1={setModalState1} />
+                  )}
+                  {hasForm && formTitle === "reellens" && (
+                    <>
+                      <h3>Register for {title}</h3>
+                      <a href={formEvents[0].reellens}>
+                        click here to fill the form for {title}
+                      </a>
+                    </>
+                  )}
+                  {hasForm && formTitle === "shutterbugs" && (
+                    <>
+                      <h3>Register for {title}</h3>
+                      <a href={formEvents[0].shutterbugs}>
+                        click here to fill the form for {title}
+                      </a>
+                    </>
+                  )}
+                  {hasForm && formTitle === "article" && (
+                    <>
+                      <h3>Register for {title}</h3>
+                      <a href={formEvents[0].article}>
+                        click here to fill the form for {title}
+                      </a>
+                    </>
+                  )}
+                  {hasForm && formTitle === "artwork" && (
+                    <>
+                      <h3>Register for {title}</h3>
+                      <a href={formEvents[0].artnetwork}>
+                        click here to fill form for {title}
+                      </a>
+                    </>
+                  )}
+                  {hasForm && formTitle === "poetry" && (
+                    <>
+                      <h3>Register for {title}</h3>
+                      <a href={formEvents[0].poetry}>
+                        click here to fill the form for {title}
+                      </a>
+                    </>
                   )}
                 </div>
                 <div className="bg-[url('./assets/img/footer-bg.png')] px-4 py-1 pt-1.5 h-10 flex flex-row-reverse sm:px-6">

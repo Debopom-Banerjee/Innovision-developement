@@ -14,6 +14,7 @@ export const EventCard = ({
   theme,
   note,
   coordinators,
+  hasForm,
 }) => {
   const { currUser } = useContext(UserContext);
   // const { modalState, setModalState } = useContext(UserContext);
@@ -71,6 +72,7 @@ export const EventCard = ({
           modalState1={modalState1}
           setModalState1={setModalState1}
           title={title}
+          hasForm={hasForm}
         />
         <div className="event-txtx">
           <h4>{title}</h4>
