@@ -1,15 +1,16 @@
-import meter1 from "../assets/img/logo.png";
-import meter2 from "../assets/img/logo.png";
-import meter3 from "../assets/img/logo.png";
-import Carousel from 'react-multi-carousel';
+
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
-import quiz1 from "../assets/img/webify_pic.JPG";
-import quiz2 from "../assets/img/quiz1_pic.JPG";
-import codathon1 from "../assets/img/codathon_pic.JPG";
-import codathon from "../assets/img/codathon1_pic.JPG";
-import spellbee from "../assets/img/spellbee_pic.JPG";
+
+import quiz1 from "../assets/img/quiz1_pic.webp";
+import codathon1 from "../assets/img/codathon1_pic.webp";
+import codathon from "../assets/img/codathon_pic.webp";
+import spellbee from "../assets/img/spellbee_pic.webp";
+import webify from "../assets/img/webify_pic.webp";
+import quiz from "../assets/img/quiz_pic.webp";
+import participant from "../assets/img/participant1.webp";
+import participant1 from "../assets/img/participant2.webp";
+import extempore from "../assets/img/extempore_pic.webp";
+import board from "../assets/img/board.webp";
 import colorSharp from "../assets/img/color-sharp.png"
 
 import AliceCarousel from 'react-alice-carousel';
@@ -17,27 +18,9 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 
 
 export const Gallery = () => {
-    // const responsive = {
-    //     superLargeDesktop: { 
 
-    //         breakpoint: { max: 4000, min: 3000 },
-    //         items: 5
-    //     },
-    //     desktop: {
-    //         breakpoint: { max: 3000, min: 1024 },
-    //         items: 3
-    //     },
-    //     tablet: {
-    //         breakpoint: { max: 1024, min: 464 },
-    //         items: 2
-    //     },
-    //     mobile: {
-    //         breakpoint: { max: 464, min: 0 },
-    //         items: 1
-    //     }
-    // };
 
-    const ImgList = [quiz1, codathon, codathon1, spellbee]
+    const ImgList = [quiz1, codathon, codathon1, spellbee, webify, quiz, participant, participant1, extempore, board]
 
     return (
         <section className="gallery" id="gallery">
@@ -46,25 +29,6 @@ export const Gallery = () => {
                     <div className="col-12">
                         <div className="gallery-bx wow zoomIn">
                             <h2>Gallery</h2>
-
-                            {/* <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme gallery-slider">
-                                <div className="item">
-                                    <img src={quiz1} alt="Image" />
-
-                                </div>
-                                <div className="item">
-                                    <img src={codathon1} alt="Image" />
-
-                                </div>
-                                <div className="item">
-                                    <img src={codathon} alt="Image" />
-
-                                </div>
-                                <div className="item">
-                                    <img src={spellbee} alt="Image" />
-
-                                </div>
-                            </Carousel> */}
                             <div className='mt-4'>
                                 <AliceCarousel
                                     autoPlay
@@ -74,7 +38,7 @@ export const Gallery = () => {
                                     disableButtonsControls
                                     disableDotsControls
                                     mouseTracking
-                                    itemsInSlide={4}
+                                    itemsInSlide={10}
                                     responsive={{
                                         0: { items: 1 },
                                         576: { items: 2 },

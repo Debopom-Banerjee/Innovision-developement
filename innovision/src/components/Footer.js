@@ -26,7 +26,7 @@ export const Footer = () => {
             </div>
             <br />
             <p>©2023 Innovision™. All Rights Reserved</p>
-            <p className="footer-p">Made with ♡ by Innovion Tech Team</p>
+            <p className="footer-p">Made with ♡ by Innovision Tech Team</p>
           </Col>
         </Row>
       </Container>
