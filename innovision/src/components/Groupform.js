@@ -74,7 +74,7 @@ function Groupform({ title, setModalState1 }) {
   };
 
   return (
-    <div className="max-h-[400px] overflow-y-auto">
+    <div className="max-h-[400px] overflow-y-auto overflow-x-hidden">
       <h4 className="text-3xl mb-1 text-purple-500 p-3 uppercase">
         Enter details for {title}
       </h4>
@@ -93,7 +93,7 @@ function Groupform({ title, setModalState1 }) {
       >
         {fields.map((item, index) => (
           <>
-            <div key={index}>
+            <div className="flex flex-col sm:pr-20" key={index}>
               <p className="text-xl mb-1 text-purple-500 p-3 uppercase">
                 Member {index + 1} details
               </p>
@@ -101,7 +101,7 @@ function Groupform({ title, setModalState1 }) {
                 type="text"
                 placeholder={`Team Member ${index + 1} Name`}
                 {...register(`participants.${index}.name`)}
-                className="p-2 px-5 border mb-2 border-white rounded-lg !bg-transparent"
+                className="p-2 px-5 border my-2 border-white rounded-lg !bg-transparent"
               />
               {errors.participants?.[index]?.name && (
                 <span className="text-red-600 ml-3">Name required</span>
@@ -110,7 +110,7 @@ function Groupform({ title, setModalState1 }) {
                 type="text"
                 placeholder={`Team Member ${index + 1} Email`}
                 {...register(`participants.${index}.personal_email`)}
-                className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
+                className="p-2 px-5 border my-2  border-white rounded-lg !bg-transparent"
               />
               {errors.participants?.[index]?.personal_email && (
                 <span className="text-red-600 ml-3">Email required</span>
@@ -119,7 +119,7 @@ function Groupform({ title, setModalState1 }) {
                 type="text"
                 placeholder={`Team Member ${index + 1} Mobile no.`}
                 {...register(`participants.${index}.mobile_no`)}
-                className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
+                className="p-2 px-5 border my-2  border-white rounded-lg !bg-transparent"
               />
               {errors.participants?.[index]?.mobile_no && (
                 <span className="text-red-600 ml-3">Mobile no. required</span>
@@ -128,7 +128,7 @@ function Groupform({ title, setModalState1 }) {
                 type="text"
                 placeholder={`Team Member ${index + 1} Roll no.`}
                 {...register(`participants.${index}.college_roll`)}
-                className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
+                className="p-2 px-5 border my-2  border-white rounded-lg !bg-transparent"
               />
               {errors.participants?.[index]?.college_roll && (
                 <span className="text-red-600 ml-3">College Roll required</span>
@@ -137,33 +137,32 @@ function Groupform({ title, setModalState1 }) {
                 type="text"
                 placeholder={`Team Member ${index + 1} Year`}
                 {...register(`participants.${index}.year`)}
-                className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
+                className="p-2 px-5 border my-2  border-white rounded-lg !bg-transparent"
               />
               {errors.participants?.[index]?.year && (
                 <span className="text-red-600 ml-3">Year required</span>
               )}
               <input
                 type="text"
-                placeholder={`Member ${index + 1} Department`}
+                placeholder={`Team Member ${index + 1} Department`}
                 {...register(`participants.${index}.department`)}
-                className="p-2 px-5 border mb-2  border-white rounded-lg !bg-transparent"
+                className="p-2 px-5 border my-2  border-white rounded-lg !bg-transparent"
               />
               {errors.participants?.[index]?.department && (
                 <span className="text-red-600 ml-3">Department required</span>
               )}
-              <button
-                className="text-white border-[5px] px-8 py-2 rounded-xl bg-red-700 hover:bg-red-300"
-                type="button"
-                onClick={() => remove(index)}
-              >
-                Delete
-              </button>
-              {/* Add more input fields for other details like email, year, etc. */}
             </div>
+            <button
+              className="text-white border-[5px] px-8 py-2 rounded-xl bg-red-700 hover:bg-red-300 sm:w-5/6"
+              type="button"
+              onClick={() => remove(index)}
+            >
+              Delete
+            </button>
           </>
         ))}
         <button
-          className="text-white border-[5px] px-4 py-2 rounded-xl bg-purple-700 border-purple-400"
+          className="text-white border-[5px] px-4 py-2 mt-4 rounded-xl bg-purple-700 border-purple-400"
           type="button"
           onClick={() => append()}
         >
@@ -172,6 +171,7 @@ function Groupform({ title, setModalState1 }) {
         <button
           type="submit"
           className="mt-3 inline-flex justify-center rounded-md  bg-gradient-to-r from-violet-500 to-fuchsia-500 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm ring-1 ring-inset focus:from-purple-800 focus:to-blue-950  sm:mt-0 sm:w-auto absolute bottom-1 right-32 w-auto"
+          disabled={fields.length === 0}
         >
           Register
         </button>

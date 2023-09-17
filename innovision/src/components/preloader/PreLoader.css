@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: auto;
   width: 600px;
   font-size: 50px;
   font-weight: 1000;
