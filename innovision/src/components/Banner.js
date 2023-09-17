@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import logo3 from "../assets/img/logo3.png";
 import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import 'animate.css';
+import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
@@ -76,9 +76,8 @@ export const Banner = () => {
                     </span>
                   </h2>
                   <button>
-                    Register Now{" "}
-                    <a href="#events">
-                      <ArrowRightCircle size={27} />
+                    <a href="#events" className="flex flex-row">
+                      Register Now <ArrowRightCircle size={27} />
                     </a>
                   </button>
                   <span>

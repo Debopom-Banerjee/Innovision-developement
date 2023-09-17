@@ -559,6 +559,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transform: translate(-70%, +100%);
 }
 
+@media screen and (max-width: 600px) {
+  .footer-p {
+    transform: translate(31%, 20%) !important;
+  }
+}
+@media screen and (max-width: 520px) {
+  .footer-p {
+    transform: translate(14%, 20%) !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer-p {
+    transform: translate(10%, 20%) !important;
+  }
+}
 /************ Contact Us Css ************/
 
 .contact {

@@ -9,7 +9,7 @@ const PreLoader = () => {
   return (
     <>
       <div className="preloader">
-        <div className="preload-container">
+        <div className="preload-container max-[640px]:flex-col">
           <span>Think.</span>
           <span>Create.</span>
           <span>Innovate.</span>
