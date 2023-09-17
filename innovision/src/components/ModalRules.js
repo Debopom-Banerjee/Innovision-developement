@@ -48,7 +48,7 @@ export default function ModalRules({
             >
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                 <div className="overflow-y-auto bg-white px-4 pb-1 pt-1 sm:p-6 sm:pb-4 bg-[url('./assets/img/footer-bg.png')]">
-                  <h3>Rules for {title}</h3>
+                  <h3 className="text-3xl mb-1 text-purple-500 p-3 uppercase">Rules for {title}</h3>
                   <p>{info}</p>
                   <p>{rules}</p>
                   <p>{theme}</p>
