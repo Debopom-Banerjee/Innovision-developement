@@ -22,6 +22,7 @@ const formSchema = yup
   })
   .required();
 const schema = yup.object({
+  teamname: yup.string().required("This is a required field"),
   participants: yup.array().of(formSchema),
 });
 
@@ -70,7 +71,6 @@ function Groupform({ title, setModalState1 }) {
       console.log(e);
     }
     setModalState1(false);
-    console.log(data);
   };
 
   return (
@@ -78,6 +78,15 @@ function Groupform({ title, setModalState1 }) {
       <h4 className="text-3xl mb-1 text-purple-500 p-3 uppercase">
         Enter details for {title}
       </h4>
+      <p className="text-xl mb-1 text-purple-500 p-3 uppercase">
+        Enter Team Name
+      </p>
+      <input
+        type="text"
+        placeholder="Team Name"
+        {...register(`teamname`)}
+        className="p-2 ml-5 px-5 border mb-4 border-white rounded-lg !bg-transparent"
+      />
       <form
         onSubmit={handleSubmit(submitForm)}
         className="flex row gap-1 px-8 pb-4"
