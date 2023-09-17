@@ -33,7 +33,6 @@ export const EventCard = ({
 
   const OpenModal = () => {
     setModalState1(true);
-    console.log(modalState1);
   };
   const openRules = () => {
     setModalRules(true);

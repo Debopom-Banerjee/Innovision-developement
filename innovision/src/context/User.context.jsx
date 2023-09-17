@@ -10,9 +10,9 @@ export const UserContext = createContext({
 
 export const UserProvider = ({ children }) => {
   const [currUser, setCurrUser] = useState(null);
-  
+
   const [modalState, setModalState] = useState(false);
-  
+
   const value = { currUser, setCurrUser, modalState, setModalState };
 
   useEffect(() => {
@@ -21,10 +21,7 @@ export const UserProvider = ({ children }) => {
         await createUserDocFromAuth(user);
       }
       setCurrUser(user);
-      console.log(user);
-      // console.log("user email and pic", user.email, user.photoURL);
     });
-
   }, []);
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
