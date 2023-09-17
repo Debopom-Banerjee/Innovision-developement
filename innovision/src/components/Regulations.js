@@ -16,18 +16,6 @@ import valorant from "../assets/img/valo.png";
 import Spell_Bee from "../assets/img/Spell_Bee.jpg";
 import TrackVisibility from "react-on-screen";
 
-{
-  rules &&
-    rules.split("\br").map((subStr, i) => {
-      return (
-        <Fragment key={i}>
-          {subStr}
-          <br />
-        </Fragment>
-      );
-    });
-}
-
 export const TechEvents = [
   {
     title: "Tech C",
