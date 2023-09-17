@@ -83,6 +83,7 @@ export const NontechEvents = [
       "Swagat Santra :- +91 8942052915<br>Amit Roy Chowdhury:- +91 73648 28740<br>Srabany Biswas (2nd yr) :- +91 70037 37501<br>Swastik Bhattacharya (2nd yr) : +91 6289 082 119",
     imgUrl: art_wall,
     description: "Sept 7-8",
+    hasForm: true,
   },
   {
     title: "Article",
@@ -95,6 +96,7 @@ export const NontechEvents = [
       "Hadi Ahmed: +91 9477726987<br>Archisman Ghosh: +91 915358848<br>Sayan Biswas (2nd yr): +91 9123719208<br>Sangita Giri (2nd yr): +91 95471 44084",
     imgUrl: article,
     description: "Sept 7-8",
+    hasForm: true,
   },
   {
     title: "Poetry",
@@ -105,6 +107,7 @@ export const NontechEvents = [
       "ANAMITRA SENGUPTA :- +91 9163708561<br>ANKURI SEN :- +91 9903290308<br>SWASTIKA TIKADER (2nd yr): +91 9641459210<br>NIKIZA BISWAS (2nd yr): +91 62901 27350",
     imgUrl: poetry,
     description: "Sept 7-8",
+    hasForm: true,
   },
   {
     title: "Shutterbugs",
@@ -118,10 +121,10 @@ export const NontechEvents = [
       "Satwik Das: 9330275822 <br>Aryan Roy: 9735546345 <br>Rishav Pramanik: 9073172250  <br>Shreedatri Saha(2nd year) : +91 98302 92551",
     imgUrl: shutterbugs,
     description: "Sept 7-8",
+    hasForm: true,
   },
   {
     title: "Extempore",
-    isGroupEvent: false,
     collection: "Extempore",
     imgUrl: extempore,
     description: "Sept 7-8",
@@ -148,6 +151,7 @@ export const NontechEvents = [
       "Soumyajit Bag: +916296502590<br>Madhushri Nag: +919051571992<br>Sebantika Guin(2nd Yr) : +918777060137<br>Romit Guha(2nd Yr) : +917501836609",
     imgUrl: reel,
     description: "Sept 7-8",
+    hasForm: true,
   },
   {
     title: "Spell Bee",
