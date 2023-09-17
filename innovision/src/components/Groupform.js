@@ -45,6 +45,16 @@ function Groupform({ title, setModalState1 }) {
       },
     },
   });
+  const handleInputFocus = (e) => {
+    e.target.classList.add("focused");
+    e.target.classList.add("pt-3");
+  };
+  const handleInputBlur = (e) => {
+    if (e.target.value === "") {
+      e.target.classList.remove("focused");
+      e.target.classList.remove("pt-3");
+    }
+  };
 
   const { currUser } = useContext(UserContext);
   const submitForm = async (data) => {
@@ -81,76 +91,116 @@ function Groupform({ title, setModalState1 }) {
       <p className="text-xl mb-1 text-purple-500 p-3 uppercase">
         Enter Team Name
       </p>
-      <input
-        type="text"
-        placeholder="Team Name"
-        {...register(`teamname`)}
-        className="p-2 ml-5 px-5 border mb-4 border-white rounded-lg !bg-transparent"
-      />
+      <div className="field-container flex flex-col ml-5 !w-5/6">
+        <input
+          type="text"
+          onFocus={handleInputFocus}
+          {...register(`teamname`, {
+            onBlur: handleInputBlur,
+          })}
+          className="p-2 !w-5/6 px-3 border my-2 border-white rounded-lg !bg-transparent"
+        />
+        <label>Team Name</label>
+        {errors.teamname && (
+          <span className="text-red-600 ml-3">Team Name required</span>
+        )}
+      </div>
       <form
         onSubmit={handleSubmit(submitForm)}
         className="flex row gap-1 px-8 pb-4"
       >
         {fields.map((item, index) => (
           <>
-            <div className="flex flex-col sm:pr-20" key={index}>
+            <div className="relative flex flex-col sm:pr-20" key={index}>
               <p className="text-xl mb-1 text-purple-500 p-3 uppercase">
                 Member {index + 1} details
               </p>
-              <input
-                type="text"
-                placeholder={`Member ${index + 1} Name`}
-                {...register(`participants.${index}.name`)}
-                className="p-2 px-5 border my-2 border-white rounded-lg !bg-transparent"
-              />
-              {errors.participants?.[index]?.name && (
-                <span className="text-red-600 ml-3">Name required</span>
-              )}
-              <input
-                type="text"
-                placeholder={`Member ${index + 1} Email`}
-                {...register(`participants.${index}.personal_email`)}
-                className="p-2 px-5 border my-2  border-white rounded-lg !bg-transparent"
-              />
-              {errors.participants?.[index]?.personal_email && (
-                <span className="text-red-600 ml-3">Email required</span>
-              )}
-              <input
-                type="text"
-                placeholder={`Member ${index + 1} Mobile no.`}
-                {...register(`participants.${index}.mobile_no`)}
-                className="p-2 px-5 border my-2  border-white rounded-lg !bg-transparent"
-              />
-              {errors.participants?.[index]?.mobile_no && (
-                <span className="text-red-600 ml-3">Mobile no. required</span>
-              )}
-              <input
-                type="text"
-                placeholder={`Member ${index + 1} Roll no.`}
-                {...register(`participants.${index}.college_roll`)}
-                className="p-2 px-5 border my-2  border-white rounded-lg !bg-transparent"
-              />
-              {errors.participants?.[index]?.college_roll && (
-                <span className="text-red-600 ml-3">College Roll required</span>
-              )}
-              <input
-                type="text"
-                placeholder={`Member ${index + 1} Academic Year`}
-                {...register(`participants.${index}.year`)}
-                className="p-2 px-5 border my-2  border-white rounded-lg !bg-transparent"
-              />
-              {errors.participants?.[index]?.year && (
-                <span className="text-red-600 ml-3">Year required</span>
-              )}
-              <input
-                type="text"
-                placeholder={`Member ${index + 1} Department`}
-                {...register(`participants.${index}.department`)}
-                className="p-2 px-5 border my-2  border-white rounded-lg !bg-transparent"
-              />
-              {errors.participants?.[index]?.department && (
-                <span className="text-red-600 ml-3">Department required</span>
-              )}
+              <div className="field-container flex flex-col">
+                <input
+                  type="text"
+                  onFocus={handleInputFocus}
+                  {...register(`participants.${index}.name`, {
+                    onBlur: handleInputBlur,
+                  })}
+                  className="p-2 px-3 border my-2 border-white rounded-lg !bg-transparent"
+                />
+                <label>{`Team Member ${index + 1} Name`}</label>
+                {errors.participants?.[index]?.name && (
+                  <span className="text-red-600 ml-3">Name required</span>
+                )}
+              </div>
+              <div className="field-container flex flex-col">
+                <input
+                  type="text"
+                  onFocus={handleInputFocus}
+                  {...register(`participants.${index}.personal_email`, {
+                    onBlur: handleInputBlur,
+                  })}
+                  className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
+                />
+                <label>{`Team Member ${index + 1} Email`}</label>
+                {errors.participants?.[index]?.personal_email && (
+                  <span className="text-red-600 ml-3">Email required</span>
+                )}
+              </div>
+              <div className="field-container flex flex-col">
+                <input
+                  type="text"
+                  onFocus={handleInputFocus}
+                  {...register(`participants.${index}.mobile_no`, {
+                    onBlur: handleInputBlur,
+                  })}
+                  className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
+                />
+                <label>{`Team Member ${index + 1} Mobile no.`}</label>
+                {errors.participants?.[index]?.mobile_no && (
+                  <span className="text-red-600 ml-3">Mobile no. required</span>
+                )}
+              </div>
+              <div className="field-container flex flex-col">
+                <input
+                  type="text"
+                  onFocus={handleInputFocus}
+                  {...register(`participants.${index}.college_roll`, {
+                    onBlur: handleInputBlur,
+                  })}
+                  className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
+                />
+                <label>{`Team Member ${index + 1} Roll no.`}</label>
+                {errors.participants?.[index]?.college_roll && (
+                  <span className="text-red-600 ml-3">
+                    College Roll required
+                  </span>
+                )}
+              </div>
+              <div className="field-container flex flex-col">
+                <input
+                  type="text"
+                  onFocus={handleInputFocus}
+                  {...register(`participants.${index}.year`, {
+                    onBlur: handleInputBlur,
+                  })}
+                  className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
+                />
+                <label>{`Team Member ${index + 1} Academic Year`}</label>
+                {errors.participants?.[index]?.year && (
+                  <span className="text-red-600 ml-3">Year required</span>
+                )}
+              </div>
+              <div className="field-container flex flex-col">
+                <input
+                  type="text"
+                  onFocus={handleInputFocus}
+                  {...register(`participants.${index}.department`, {
+                    onBlur: handleInputBlur,
+                  })}
+                  className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
+                />
+                <label>{`Team Member ${index + 1} Department`}</label>
+                {errors.participants?.[index]?.department && (
+                  <span className="text-red-600 ml-3">Department required</span>
+                )}
+              </div>
             </div>
             <button
               className="text-white border-[5px] px-8 py-2 rounded-xl bg-red-700 hover:bg-red-300 sm:w-5/6"

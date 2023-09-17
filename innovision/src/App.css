@@ -606,3 +606,51 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #b8b8b8;
   justify-content: space-between;
 }
+
+.field-container {
+  position: relative;
+  width: 100%;
+}
+.field-container label {
+  position: absolute;
+  top: 1.1rem;
+  right: 1rem;
+  left: 1rem;
+  color: #e2dede;
+  width: min-content;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  font-weight: 500;
+  pointer-events: none;
+  transition-property: top, font-size, line-height;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+  z-index: 0;
+}
+.field-container input {
+  position: relative;
+  color: white;
+  background: #333333;
+  padding: 1.8rem 1rem 0.7rem;
+  border-radius: 0.3rem;
+  margin: 5px;
+  border: 1.3px solid #333333;
+  font-weight: 400;
+  font-size: 1rem;
+  z-index: 0;
+  width: -webkit-fill-available;
+}
+input:focus {
+  outline: none;
+}
+input.focused + label {
+  top: 0.4rem;
+  font-size: 0.6rem;
+  line-height: 1.7rem;
+  transition-property: top, font-size, line-height;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+}
+.field-container a {
+  text-decoration: none;
+}
