@@ -17,7 +17,7 @@ export default function Modal({ modalState1, setModalState1, title, hasForm }) {
   // const [isFormVisible, setFormVisible] = useState(false);
   const checkMultipleEvent = (str) => {
     const title1 = str.replace(/ /g, "").toLowerCase();
-    const ismultipleEvents = /valorant|bgmi|quiztime|hackathon/.test(title1);
+    const ismultipleEvents = /valorant|bgmi|quiztime/.test(title1);
     return ismultipleEvents;
   };
   const checkGoogleFormEvent = (str) => {
