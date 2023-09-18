@@ -114,7 +114,7 @@ export const NavBar = () => {
                         </Nav>
                         <span className="navbar-text">
                             <div className="social-icon">
-                                <a href="https://discord.gg/Sz7uAMyU">
+                                <a href="https://discord.gg/7w2JQEN4">
                                     <img src={navIcon1} alt="Discord" />
                                 </a>
                                 <a href="https://www.facebook.com/innovisionrcc/">
