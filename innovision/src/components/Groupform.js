@@ -124,7 +124,7 @@ function Groupform({ title, setModalState1 }) {
                   })}
                   className="p-2 px-3 border my-2 border-white rounded-lg !bg-transparent"
                 />
-                <label>{`Team Member ${index + 1} Name`}</label>
+                <label>{` Member ${index + 1} Name`}</label>
                 {errors.participants?.[index]?.name && (
                   <span className="text-red-600 ml-3">Name required</span>
                 )}
@@ -138,7 +138,7 @@ function Groupform({ title, setModalState1 }) {
                   })}
                   className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
                 />
-                <label>{`Team Member ${index + 1} Email`}</label>
+                <label>{` Member ${index + 1} Email`}</label>
                 {errors.participants?.[index]?.personal_email && (
                   <span className="text-red-600 ml-3">Email required</span>
                 )}
@@ -152,7 +152,7 @@ function Groupform({ title, setModalState1 }) {
                   })}
                   className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
                 />
-                <label>{`Team Member ${index + 1} Mobile no.`}</label>
+                <label>{` Member ${index + 1} Mobile no.`}</label>
                 {errors.participants?.[index]?.mobile_no && (
                   <span className="text-red-600 ml-3">Mobile no. required</span>
                 )}
@@ -166,7 +166,7 @@ function Groupform({ title, setModalState1 }) {
                   })}
                   className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
                 />
-                <label>{`Team Member ${index + 1} Roll no.`}</label>
+                <label>{` Member ${index + 1} Roll no.`}</label>
                 {errors.participants?.[index]?.college_roll && (
                   <span className="text-red-600 ml-3">
                     College Roll required
@@ -182,7 +182,7 @@ function Groupform({ title, setModalState1 }) {
                   })}
                   className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
                 />
-                <label>{`Team Member ${index + 1} Academic Year`}</label>
+                <label>{` Member ${index + 1} Year`}</label>
                 {errors.participants?.[index]?.year && (
                   <span className="text-red-600 ml-3">Year required</span>
                 )}
@@ -196,7 +196,7 @@ function Groupform({ title, setModalState1 }) {
                   })}
                   className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
                 />
-                <label>{`Team Member ${index + 1} Department`}</label>
+                <label>{` Member ${index + 1} Department`}</label>
                 {errors.participants?.[index]?.department && (
                   <span className="text-red-600 ml-3">Department required</span>
                 )}

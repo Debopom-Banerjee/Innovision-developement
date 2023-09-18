@@ -128,7 +128,7 @@ function Forms({ title, setModalState1 }) {
             })}
             className="p-2 px-2 !pl-4 border my-2 border-white rounded-lg !bg-transparent"
           />
-          <label className="!left-7">Academic Year</label>
+          <label className="!left-7">Year</label>
           {errors.year && <span className="text-red-600">Year required</span>}
         </div>
         <div className="field-container flex flex-col">
