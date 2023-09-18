@@ -578,8 +578,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact {
   padding: 50px 50px;
-  background: linear-gradient(90.21deg, #3c0024 -5.91%, #16036b 111.58%);
-  background-position: center center;
+  background-image: url("./assets/img/footer-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
