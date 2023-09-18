@@ -18,6 +18,7 @@ const schema = yup
     college_roll: yup.string().required("This is a required field"),
     mobile_no: yup.string().required("This is a required field"),
     department: yup.string().required("This is a required field"),
+    hack_id: yup.string().required("This is a required field"),
   })
   .required();
 
@@ -31,7 +32,7 @@ function Forms({ title, setModalState1 }) {
   });
   const { currUser } = useContext(UserContext);
   const submitForm = async (data) => {
-    const { name, mobile_no, college_roll, year, department } = data;
+    const { name, mobile_no, college_roll, year, department, hack_id } = data;
     const email = currUser.email;
     const eventName = title.replace(/ /g, "").toLowerCase();
     try {
@@ -42,6 +43,7 @@ function Forms({ title, setModalState1 }) {
         year,
         department,
         email,
+        hack_id,
       });
       toast.success("Form submitted Successfully!!!", {
         duration: 4000,
@@ -128,7 +130,7 @@ function Forms({ title, setModalState1 }) {
             })}
             className="p-2 px-2 !pl-4 border my-2 border-white rounded-lg !bg-transparent"
           />
-          <label className="!left-7">Academic Year</label>
+          <label className="!left-7">Year</label>
           {errors.year && <span className="text-red-600">Year required</span>}
         </div>
         <div className="field-container flex flex-col">
@@ -144,6 +146,21 @@ function Forms({ title, setModalState1 }) {
             <span className="text-red-600">Department required</span>
           )}
         </div>
+        {title === "Codathon" && (
+          <div className="field-container flex flex-col">
+            <input
+              onFocus={handleInputFocus}
+              {...register("hack_id", {
+                onBlur: handleInputBlur,
+              })}
+              className="p-2 px-3 border my-2 border-white rounded-lg !bg-transparent"
+            />
+            <label className="!left-7">HackerRank id </label>
+            {errors.hack_id && (
+              <span className="text-red-600">HackerRank Id required</span>
+            )}
+          </div>
+        )}
         <button
           type="submit"
           className="mt-3 inline-flex justify-center rounded-md  bg-gradient-to-r from-violet-500 to-fuchsia-500 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm ring-1 ring-inset focus:from-purple-800 focus:to-blue-950  sm:mt-0 sm:w-auto absolute bottom-[-40px] right-32 w-auto "
