@@ -145,7 +145,7 @@ export const NontechEvents = [
       "1. No more than 2 entries will be allowed per individual. In case of multiple entries, only the first 2 entries will be considered valid. \n  2. Reels should be in Portrait Mode (an aspect ratio 9:16). \n  3. Copying of Pictures from Google or Downloading Reels from any source will result in disqualification. \n  4. Videos should be maximum 1 minute long. \n  5. Watermarks are not allowed \n  6. The video file is to be renamed as – Name_ClassRoll_video_1 and/or Name_ClassRoll_video_2 (For eg., SoumyajitBag_CSE2021/xxx_video_1) \n  7. Incorrectly named files may be disqualified. \n  8. Videos have to be uploaded to given Google Form. \n  9. Send only MP4 files, not any other formats. \n  10. There will be a winner decided by maximum votes, APART from the winning entries chosen by the judges. \n  11. 1st years can give their personal mail id if college mailid is not available. \n  12. Submissions are to be done by 21st September, 12:30 PM .",
     note: "Note: \n Failing to adhere to the above rules will lead to immediate disqualification.",
     theme:
-      "Theme: \n i. A Day in the Life \n  ii. Hidden Gems of Kolkata \n  iii. Campus Traditions \n  iv. Travel Adventures",
+      "Theme: \n i. A Day in the Campus \n  ii. Hidden Gems of Kolkata \n  iii. Campus Traditions \n  iv. Travel Adventures",
     coordinators:
       "Coordinators: \n Soumyajit Bag: +916296502590 \n  Madhushri Nag: +919051571992 \n  Sebantika Guin(2nd Yr) : +918777060137 \n  Romit Guha(2nd Yr) : +917501836609",
     imgUrl: reel,
