@@ -46,7 +46,7 @@ export const EventCard = ({
             }
         };
         checkRegistration(currUser, newTitle);
-        console.log(title)
+        // console.log(title)
     }, [title, currUser]);
     return (
         <Col size={12} sm={6} md={4}>
