@@ -1,7 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Col } from "react-bootstrap";
 import { UserContext } from "../context/User.context";
-import { signInWithGoogleRedirect } from "../config/firebase";
+import { signInWithGoogleRedirect, isUserRegistered } from "../config/firebase";
 import Modal from "./Modal";
 import ModalRules from "./ModalRules";
 
@@ -29,7 +29,7 @@ export const EventCard = ({
     }
   };
 
-  // const [modalState, setModalState] = useState(false)
+  const [isRegistered, setIsRegistered] = useState(false);
 
   const OpenModal = () => {
     setModalState1(true);
@@ -37,7 +37,16 @@ export const EventCard = ({
   const openRules = () => {
     setModalRules(true);
   };
-
+  const newTitle = title.replace(/ /g, "").toLowerCase();
+  useEffect(() => {
+    const checkRegistration = async (currUser, newTitle) => {
+      const value = await isUserRegistered(currUser, newTitle);
+      if (value) {
+        setIsRegistered(true);
+      }
+    };
+    checkRegistration(currUser, newTitle);
+  }, [title, currUser]);
   return (
     <Col size={12} sm={6} md={4}>
       <div className="event-imgbx">
@@ -48,7 +57,11 @@ export const EventCard = ({
           </button>
         ) : (
           <button className="button" onClick={OpenModal}>
-            <span className=" font-semibold">Register Now</span>
+            {isRegistered ? (
+              <span className=" font-semibold">Edit Form</span>
+            ) : (
+              <span className=" font-semibold">Register Now</span>
+            )}
           </button>
         )}
         <button

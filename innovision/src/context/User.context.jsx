@@ -2,7 +2,6 @@ import React, { createContext, useEffect, useState } from "react";
 import {
   createUserDocFromAuth,
   onAuthStateChangedListener,
-  auth,
 } from "../config/firebase";
 export const UserContext = createContext({
   currUser: null,
@@ -12,17 +11,18 @@ export const UserContext = createContext({
 export const UserProvider = ({ children }) => {
   const [currUser, setCurrUser] = useState(null);
 
-  const value = { currUser, setCurrUser };
+  const [modalState, setModalState] = useState(false);
+
+  const value = { currUser, setCurrUser, modalState, setModalState };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChangedListener(async (user) => {
+    onAuthStateChangedListener(async (user) => {
       if (user) {
         await createUserDocFromAuth(user);
       }
       setCurrUser(user);
     });
-    return () => unsubscribe;
-  }, [auth]);
+  }, []);
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };

@@ -13,6 +13,7 @@ import {
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
+import { Result } from "antd";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA46fcqDtt-r8XLmSP_tLSDmBgWuK7Lflo",
@@ -87,6 +88,13 @@ export const addToSingleEvent = async (userAuth, eventName, studentDetails) => {
     }
   }
   return eventsRef;
+};
+
+export const isUserRegistered = async (userAuth, title) => {
+  if (!userAuth) return false;
+  const favouritesRef = doc(db, title, userAuth.uid);
+  const favSnapshot = await getDoc(favouritesRef);
+  return favSnapshot.exists();
 };
 
 export default app;
