@@ -53,7 +53,7 @@ export const EventCard = ({
             <div className="event-imgbx">
                 <img src={imgUrl} alt="img" />
                 {title === "BGMI" ? (
-                    <span className=" button font-semibold">Registration Closed</span>
+                    <span className=" closebutton font-semibold">Registration Closed</span>
                 ) : (!currUser ? (
                     <button className="button" onClick={handleGoogleSignin}>
                         <span className=" font-semibold">Sign In / Sign Up</span>
