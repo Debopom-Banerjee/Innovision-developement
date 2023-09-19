@@ -13,16 +13,16 @@ import {
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
-import { Result } from "antd";
+// import { Result } from "antd";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA46fcqDtt-r8XLmSP_tLSDmBgWuK7Lflo",
-  authDomain: "innovation-website-301ce.firebaseapp.com",
-  projectId: "innovation-website-301ce",
-  storageBucket: "innovation-website-301ce.appspot.com",
-  messagingSenderId: "9817631955",
-  appId: "1:9817631955:web:53fadc652b24828878b826",
-  measurementId: "G-F46QRRYP1V",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 // Initialize Firebase

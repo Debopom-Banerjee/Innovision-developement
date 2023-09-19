@@ -459,6 +459,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: opacity 0.3s;
 }
 
+.event-imgbx .closebutton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90.21deg, #e31919 -5.91%, #f22222 111.58%);
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
 .event-imgbx:hover img {
   filter: brightness(30%);
   /* background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%); */
@@ -466,6 +481,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .event-imgbx:hover .button {
+  opacity: 1;
+}
+
+.event-imgbx:hover .closebutton {
   opacity: 1;
 }
 /* .event-imgbx::before {
