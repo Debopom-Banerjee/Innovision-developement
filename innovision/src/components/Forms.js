@@ -18,7 +18,7 @@ const schema = yup
     college_roll: yup.string().required("This is a required field"),
     mobile_no: yup.string().required("This is a required field"),
     department: yup.string().required("This is a required field"),
-    hack_id: yup.string().required("This is a required field"),
+    hack_id: yup.string(),
   })
   .required();
 
