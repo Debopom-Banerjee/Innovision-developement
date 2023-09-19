@@ -13,7 +13,6 @@ import {
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
-import { Result } from "antd";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA46fcqDtt-r8XLmSP_tLSDmBgWuK7Lflo",

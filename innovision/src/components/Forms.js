@@ -149,6 +149,7 @@ function Forms({ title, setModalState1 }) {
             <input
               onFocus={handleInputFocus}
               {...register("hack_id", {
+                required: false,
                 onBlur: handleInputBlur,
               })}
               className="p-2 px-3 border my-2 border-white rounded-lg !bg-transparent"
