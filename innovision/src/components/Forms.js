@@ -24,7 +24,7 @@ function Forms({ title, setModalState1 }) {
           ? yup.string().required("This is a required field")
           : yup.string().default(""),
     })
-    .required();
+    // .required();
   const {
     register,
     handleSubmit,
