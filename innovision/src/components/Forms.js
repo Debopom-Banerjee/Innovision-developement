@@ -9,22 +9,18 @@ import toast from "react-hot-toast";
 
 // import { collection, addDoc } from "firebase/firestore";
 // import { db } from "../../Config/Firebase";
-
+const schema = yup
+  .object()
+  .shape({
+    name: yup.string().required("This is a required field"),
+    year: yup.string().required("This is a required field"),
+    college_roll: yup.string().required("This is a required field"),
+    mobile_no: yup.string().required("This is a required field"),
+    department: yup.string().required("This is a required field"),
+    hack_id: yup.string().default(""),
+  })
+  .required();
 function Forms({ title, setModalState1 }) {
-  const schema = yup
-    .object()
-    .shape({
-      name: yup.string().required("This is a required field"),
-      year: yup.string().required("This is a required field"),
-      college_roll: yup.string().required("This is a required field"),
-      mobile_no: yup.string().required("This is a required field"),
-      department: yup.string().required("This is a required field"),
-      hack_id:
-        title === "Codathon"
-          ? yup.string().required("This is a required field")
-          : yup.string().default(""),
-    })
-    // .required();
   const {
     register,
     handleSubmit,
@@ -153,6 +149,7 @@ function Forms({ title, setModalState1 }) {
             <input
               onFocus={handleInputFocus}
               {...register("hack_id", {
+                required: false,
                 onBlur: handleInputBlur,
               })}
               className="p-2 px-3 border my-2 border-white rounded-lg !bg-transparent"

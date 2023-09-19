@@ -1,10 +1,17 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+REACT_APP_API_KEY=AIzaSyA46fcqDtt-r8XLmSP_tLSDmBgWuK7Lflo
+REACT_APP_AUTH_DOMAIN=innovation-website-301ce.firebaseapp.com
+REACT_APP_PROJECT_ID=innovation-website-301ce
+REACT_APP_STORAGE_BUCKET=innovation-website-301ce.appspot.com
+REACT_APP_MESSAGING_SENDER_ID=9817631955
+REACT_APP_APP_ID=1:9817631955:web:53fadc652b24828878b826
+REACT_APP_MEASUREMENT_ID=G-F46QRRYP1V
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
-/config/firebase.js
+/firebase.js
 
 # testing
 /coverage
