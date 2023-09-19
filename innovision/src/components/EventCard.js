@@ -46,13 +46,14 @@ export const EventCard = ({
             }
         };
         checkRegistration(currUser, newTitle);
-        // console.log(title)
+        console.log(title)
     }, [title, currUser]);
+    
     return (
         <Col size={12} sm={6} md={4}>
             <div className="event-imgbx">
                 <img src={imgUrl} alt="img" />
-                {title === "BGMI" ? (
+                {title === "BGMI" || title === "Valorant" ? (
                     <span className=" closebutton font-semibold">Registration Closed</span>
                 ) : (!currUser ? (
                     <button className="button" onClick={handleGoogleSignin}>
