@@ -82,7 +82,7 @@ function Groupform({ title, setModalState1 }) {
     }
     setModalState1(false);
   };
-
+  const mulEventTitle = title.replace(/ /g, "").toLowerCase();
   return (
     <div className="max-h-[400px] overflow-y-auto overflow-x-hidden">
       <h4 className="text-3xl mb-1 text-purple-500 p-3 uppercase">
@@ -124,7 +124,7 @@ function Groupform({ title, setModalState1 }) {
                   })}
                   className="p-2 px-3 border my-2 border-white rounded-lg !bg-transparent"
                 />
-                <label>{`Team Member ${index + 1} Name`}</label>
+                <label>{` Member ${index + 1} Name`}</label>
                 {errors.participants?.[index]?.name && (
                   <span className="text-red-600 ml-3">Name required</span>
                 )}
@@ -138,7 +138,7 @@ function Groupform({ title, setModalState1 }) {
                   })}
                   className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
                 />
-                <label>{`Team Member ${index + 1} Email`}</label>
+                <label>{` Member ${index + 1} Email`}</label>
                 {errors.participants?.[index]?.personal_email && (
                   <span className="text-red-600 ml-3">Email required</span>
                 )}
@@ -152,7 +152,7 @@ function Groupform({ title, setModalState1 }) {
                   })}
                   className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
                 />
-                <label>{`Team Member ${index + 1} Mobile no.`}</label>
+                <label>{` Member ${index + 1} Mobile no.`}</label>
                 {errors.participants?.[index]?.mobile_no && (
                   <span className="text-red-600 ml-3">Mobile no. required</span>
                 )}
@@ -166,7 +166,7 @@ function Groupform({ title, setModalState1 }) {
                   })}
                   className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
                 />
-                <label>{`Team Member ${index + 1} Roll no.`}</label>
+                <label>{` Member ${index + 1} Roll no.`}</label>
                 {errors.participants?.[index]?.college_roll && (
                   <span className="text-red-600 ml-3">
                     College Roll required
@@ -182,7 +182,7 @@ function Groupform({ title, setModalState1 }) {
                   })}
                   className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
                 />
-                <label>{`Team Member ${index + 1} Academic Year`}</label>
+                <label>{` Member ${index + 1} Year`}</label>
                 {errors.participants?.[index]?.year && (
                   <span className="text-red-600 ml-3">Year required</span>
                 )}
@@ -196,7 +196,7 @@ function Groupform({ title, setModalState1 }) {
                   })}
                   className="p-2 px-3 border my-2  border-white rounded-lg !bg-transparent"
                 />
-                <label>{`Team Member ${index + 1} Department`}</label>
+                <label>{` Member ${index + 1} Department`}</label>
                 {errors.participants?.[index]?.department && (
                   <span className="text-red-600 ml-3">Department required</span>
                 )}
@@ -211,13 +211,36 @@ function Groupform({ title, setModalState1 }) {
             </button>
           </>
         ))}
-        <button
-          className="text-white border-[5px] px-4 py-2 mt-4 rounded-xl bg-purple-700 border-purple-400"
-          type="button"
-          onClick={() => append()}
-        >
-          Add new Member
-        </button>
+        {mulEventTitle === "quiztime" && (
+          <button
+            className="text-white border-[5px] px-4 py-2 mt-4 rounded-xl bg-purple-700 border-purple-400"
+            type="button"
+            onClick={() => append()}
+            disabled={fields.length === 2}
+          >
+            Add new Member
+          </button>
+        )}
+        {mulEventTitle === "valorant" && (
+          <button
+            className="text-white border-[5px] px-4 py-2 mt-4 rounded-xl bg-purple-700 border-purple-400"
+            type="button"
+            onClick={() => append()}
+            disabled={fields.length === 5}
+          >
+            Add new Member
+          </button>
+        )}
+        {mulEventTitle === "bgmi" && (
+          <button
+            className="text-white border-[5px] px-4 py-2 mt-4 rounded-xl bg-purple-700 border-purple-400"
+            type="button"
+            onClick={() => append()}
+            disabled={fields.length === 2}
+          >
+            Add new Member
+          </button>
+        )}
         <button
           type="submit"
           className="mt-3 inline-flex justify-center rounded-md  bg-gradient-to-r from-violet-500 to-fuchsia-500 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm ring-1 ring-inset focus:from-purple-800 focus:to-blue-950  sm:mt-0 sm:w-auto absolute bottom-1 right-32 w-auto"
