@@ -49,7 +49,15 @@ export const EventCard = ({
     console.log(title);
   }, [title, currUser]);
 
-  const ClosedEvents = ["BGMI", "Valorant", "Codathon", "Tech C", "Webify"];
+  const ClosedEvents = [
+    "BGMI",
+    "Valorant",
+    "Codathon",
+    "Tech C",
+    "Webify",
+    "QuizTime",
+    "Spell Bee",
+  ];
 
   return (
     <Col size={12} sm={6} md={4}>
