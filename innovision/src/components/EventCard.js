@@ -4,8 +4,10 @@ import { UserContext } from "../context/User.context";
 import { signInWithGoogleRedirect, isUserRegistered } from "../config/firebase";
 import Modal from "./Modal";
 import ModalRules from "./ModalRules";
+import ModalResults from "./ModalResults";
 
 export const EventCard = ({
+  index,
   title,
   description,
   info,
@@ -15,11 +17,13 @@ export const EventCard = ({
   note,
   coordinators,
   hasForm,
+  winning,
 }) => {
   const { currUser } = useContext(UserContext);
-  // const { modalState, setModalState } = useContext(UserContext);
+
   const [modalState1, setModalState1] = useState(false);
   const [modalRules, setModalRules] = useState(false);
+  const [modalResults, setModalResults] = useState(false);
 
   const handleGoogleSignin = async () => {
     try {
@@ -31,6 +35,9 @@ export const EventCard = ({
 
   const [isRegistered, setIsRegistered] = useState(false);
 
+  const openResults = () => {
+    setModalResults(true);
+  };
   const OpenModal = () => {
     setModalState1(true);
   };
@@ -56,7 +63,15 @@ export const EventCard = ({
     "Tech C",
     "Webify",
     "QuizTime",
+    "CTF",
     "Spell Bee",
+    "Quiz Time",
+    "Reel Lens",
+    "Wall (Artwork)",
+    "Wall (Article)",
+    "Wall (Poetry)",
+    "Extempore",
+    "Shutterbugs",
   ];
 
   return (
@@ -64,9 +79,12 @@ export const EventCard = ({
       <div className="event-imgbx">
         <img src={imgUrl} alt="img" />
         {ClosedEvents.includes(title) ? (
-          <span className=" closebutton font-semibold">
-            Registration Closed
-          </span>
+          <button
+            className="button !top-5/6 z-10 !cursor-pointer"
+            onClick={openResults}
+          >
+            <span className=" font-semibold !cursor-pointer">Results</span>
+          </button>
         ) : !currUser ? (
           <button className="button" onClick={handleGoogleSignin}>
             <span className=" font-semibold">Sign In / Sign Up</span>
@@ -86,6 +104,7 @@ export const EventCard = ({
         >
           <span className=" font-semibold !cursor-pointer">Guidelines</span>
         </button>
+
         <ModalRules
           modalRules={modalRules}
           setModalRules={setModalRules}
@@ -102,6 +121,15 @@ export const EventCard = ({
           title={title}
           hasForm={hasForm}
         />
+
+        <ModalResults
+          key={index}
+          modalResults={modalResults}
+          setModalResults={setModalResults}
+          result={winning}
+          title={title}
+        />
+
         <div className="event-txtx">
           <h4>{title}</h4>
           <span>{description}</span>

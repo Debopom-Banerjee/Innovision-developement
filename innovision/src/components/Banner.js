@@ -14,7 +14,7 @@ export const Banner = () => {
   const [index, setIndex] = useState(1);
   const toRotate = ["Annual Departmental Fest of CSE"];
   const period = 4000;
-
+  console.log(index);
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();

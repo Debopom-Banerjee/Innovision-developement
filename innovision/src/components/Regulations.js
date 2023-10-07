@@ -23,6 +23,26 @@ export const TechEvents = [
       "Coordinators: \n RAJ MANDAL: 62907 91304 \n SOUMYADEEP CHAKROBORTY: 62944 08423 \n ACHYUT KUNDU: 89271 09668 \n AKASHDEEP MONDAL (2nd yr): 75839 59428 \n DIPTODEEP BISWAS (2nd yr): 70449 32097",
     imgUrl: techC,
     description: "Sept 7-8",
+
+    winning: [
+      {
+        category: "",
+        winners: [
+          {
+            position: "Winner",
+            name: "Rajdeep Mondal (CSE 3rd year) ",
+          },
+          {
+            position: "1st Runner's Up",
+            name: "Saraseej De (CSE 2nd year) ",
+          },
+          {
+            position: "2nd Runner's Up",
+            name: "Swastik Bhattacharyya (CSE 2nd year)",
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Codathon",
@@ -31,6 +51,42 @@ export const TechEvents = [
       "Coordinators: \n Chayandev Bera: 7478637540 \n  Rajdeep Mondal: 7439603269 \n  Swastika Bose: 7044669104 \n  Dibakar Banerjee (2nd yr): 9051484336 \n  Swapnendu Banerjee (2nd yr): 8345952856",
     imgUrl: codathon,
     description: "Sept 7-8",
+    winning: [
+      {
+        category: "Junior",
+        winners: [
+          {
+            position: "1st",
+            name: "Timothy Utsab Bandyopadhyay (CSE 1st year) ",
+          },
+          {
+            position: "2nd",
+            name: "Udit Kumar (CSE 1st year) ",
+          },
+          {
+            position: "3rd",
+            name: "Archisha Upadhyaya (CSE 1st year)",
+          },
+        ],
+      },
+      {
+        category: "Senior",
+        winners: [
+          {
+            position: "1st",
+            name: "Vaibhav Jaiswal (IT 3rd year)",
+          },
+          {
+            position: "2nd",
+            name: "Diptodeep Biswas (CSE 2nd year) ",
+          },
+          {
+            position: "3rd",
+            name: "Swastik Bhattacharya (CSE 2nd year)",
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Webify",
@@ -42,6 +98,38 @@ export const TechEvents = [
       "Coordinators: \n Souvik Bhattacharya: 9433591372 \n  Sansrita Saha: 7003612844 \n  Urjita Ray (2nd year): 8017762492 \n  Pratyush Pal (2nd year): 9330096004",
     imgUrl: webify,
     description: "Sept 7-8",
+    winning: [
+      {
+        category: "Junior",
+        winners: [
+          {
+            position: "1st",
+            name: "Gaurav Jaiswal (CSE AI/ML 1st year)",
+          },
+          {
+            position: "2nd",
+            name: "Shreya Shaw (ECE 1st Year)",
+          },
+        ],
+      },
+      {
+        category: "Senior",
+        winners: [
+          {
+            position: "1st",
+            name: "Sagnik Datta (CSE 2nd Year)",
+          },
+          {
+            position: "2nd",
+            name: "Arna Pal (CSE 3rd Year) ",
+          },
+          {
+            position: "3rd",
+            name: "Subha Mondal (CSE 2nd Year)",
+          },
+        ],
+      },
+    ],
   },
   {
     title: "CTF",
@@ -50,7 +138,19 @@ export const TechEvents = [
     description: "Sept 7-8",
     coordinators:
       "Coordinators: \n Sambit Sarkar: 89025 27649 \n Debopom Banerjee:  94749 43454 \n Soumyadip Patra (2nd yr): 9734813971 \n Rounak Chakraborty (2nd yr): 8100473796",
+    winning: [
+      {
+        category: "",
+        winners: [
+          {
+            position: "Winner",
+            name: "Abhay Shaw (IT 3rd Year)",
+          },
+        ],
+      },
+    ],
   },
+
   {
     title: "BGMI",
     rules:
@@ -59,6 +159,21 @@ export const TechEvents = [
       "Coordinators: \n Shivam kumar: 7665181154 \n  Gangesh kumar: 7352743445 \n  Sayan Chakroborty(2nd yr): 7001827727 \n  Supratim Jana(2nd yr): 7439265708",
     imgUrl: bgmi,
     description: "Sept 7-8",
+    winning: [
+      {
+        category: "",
+        winners: [
+          {
+            position: "Winner",
+            name: "Team H4IL \n Zubair Nasim( IT 1st year) & Prem Chand Mandal ( IT 1st year) ",
+          },
+          {
+            position: "Runners up",
+            name: "Team NS \n Shivam Kumar (CSE 3rd year) & Gangesh Kumar (CSE 3rd year)",
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Valorant",
@@ -68,11 +183,27 @@ export const TechEvents = [
       "General Rules: \n * Tournament schedules will be notified to all participants on 20/09/2023 morning. \n * The team will work under the assumption that each participant is aware of all the rules and checks them regularly although significant rule changes will be communicated.  A lack of knowledge of the rules will not be used as an excuse for rule-breaking. \n * Players who take part are required to play with the Riot ID they have specified. In the event another account is going to be used, submit this to the organising team at the earliest opportunity along with an explanation for the switch. \n * Players found breaking the rules will be penalised. The exact punishment will be decided by organising team. Examples of punishments are replay, penalty points, exiting the tournament early, a temporary or a permanent ban. \n * Players found to be complaining about losing a match or found to be playing out with the spirit of the game will be named and shamed as sore losers and their team may be subject to further penalties. \n * If there are suspicions that your opponent is not playing by the rules or serious lag occurs for a long time, report this to the organising team as soon as possible, before your opponent has taken benefit of the problem. \n * All participants must check-in 15 minutes before play starts. Players who do not check-in within a minimum of 5 minutes cannot be guaranteed a match. \n * The match schedule will be communicated to players in advance. \n \n VALORANT TOURNAMENT GUIDELINES: \n Knockout matches( if u loose u out)- BO1 \n Final-tbd Map veto : VCT MASTERS STAGE 1 ( Ascent Bind Breeze Fracture Haven Icebox Split) \n Toss winner - 1.bans 1 map \n Toss looser - 2. Bans 2nd map \n Toss winner 1. Bans 3rd map \n Toss looser 2. Band 4th map \n Toss winner 1. Bans 5th map \n Toss looser 2. Bans 6th map \n Toss winner : picks side (Attack/ Defence) \n Cheats off /tournament mode \n 1 timeout per half \n \n Schedule: \n 20th sept : \nKnockout 1: 7:30 -8:30 \n Knockout 2: 7:30- 8:30 \n Knockout 3: 8:30 -9:30 \n Knockout 4: 8:30 -9:30 \n Remaining matches to be notified later.\n \n General Gameplay Rules: \n All agents and weapons are allowed to be used. \n Each team needs 5 members to play. \n The game ends once a team wins 13 rounds. In the event of a 12:12 tie, overtime will be enabled. In this case, the game will continue until one team has a 2 round lead over the other. \n * All participants must treat each other and the organisation with respect. \n * When a participant has displayed hurtful, offensive or racist expressions towards his/her opponent, they may be immediately disqualified and disciplinary measures will be taken. \n * Bad language and/or threats against the organising team results in an instant disqualification. \n * In cases of fraudulent activity or players caught cheating, a participant will be disqualified immediately and disciplinary measures will be taken. \n * The use of the following programs is considered cheating: \n    1. Multihacks \n    2. Wallhack \n    3. Aimbot \n * These are only examples, other programs or methods may be considered cheats as well.",
     coordinators:
       "Coordinators: \n RISHAV AICH: 94335 64027 \n SHAURYAM DUBEY: 62039 40031 \n SOHOM MITTER (2nd yr): 62912 75950 \n SOUMYARAJ SARKAR (2nd yr): 62902 75911",
+
+    winning: [
+      {
+        category: "",
+        winners: [
+          {
+            position: "Winner",
+            name: "Team NVM",
+          },
+          {
+            position: "Runners up",
+            name: "Team XEBIT",
+          },
+        ],
+      },
+    ],
   },
 ];
 export const NontechEvents = [
   {
-    title: "Artwork",
+    title: "Wall (Artwork)",
     info: "“Every artist dips his \n ush in his soul and paints his nature into his pictures.” - Henry Ward Beeche",
     rules:
       "No plagiarism allowed. \n   The submitted artwork must be an original creation of the artist. \n  The artwork must not infringe on any copyright or intellectual property rights of others. \n  Artists may submit up to three artworks per submission. \n  The artwork should be suitable for public display, as it will be showcased in a communal space. \n  Artwork must not contain offensive, explicit, or inappropriate content. \n  The dimensions provided should be accurate, and the artwork should fit within the specified space. \n  All submitted artwork will be reviewed by a panel, and the decision to display the artwork lies with the organizers. \n  The artist will retain ownership of the artwork, but they grant permission for it to be displayed in the designated space for the duration specified by the organizers. \n  Hand made drawings and artwork must be submitted physically  to the coordinators by 20th of September, 2023, till 12:30 pm at room no N310A. \n The dimensions provided should be accurate, and the artwork should fit within the specified space.(<A4 or in A4 dimension) \n The upload of Digital artwork is compulsory by 20th September.",
@@ -82,9 +213,28 @@ export const NontechEvents = [
     imgUrl: art_wall,
     description: "Sept 7-8",
     hasForm: true,
+    winning: [
+      {
+        category: "",
+        winners: [
+          {
+            position: "1st",
+            name: "Soham Kr. Dey , 1st Year CSE",
+          },
+          {
+            position: "2nd",
+            name: "Smaranika Porel, 1st Year CSE & Debojit Mahakal, 2nd Year CSE",
+          },
+          {
+            position: "3rd",
+            name: "Srabany Biswas, 2nd Year CSE & Saniya Bharati, 1st Year CSE AI ML",
+          },
+        ],
+      },
+    ],
   },
   {
-    title: "Article",
+    title: "Wall (Article)",
     info: "“A non-writing writer is a monster courting insanity,”-Franz Kafka",
     rules:
       "NO Plagiarism allowed (Only unique and original material will be accepted). \n  NO Humiliating or Offensive context is allowed. \n  Articles can be in any of the following languages: • Hindi (हिन्दी), •Bangla ( বাংলা), •English \n  Type the article as a Document(.docx format) and attach it to the Form. \n  Maximum 550 words allowed. \n  Mention your name , class roll number and department at the beginning of the document (Roll number format: CSE20XX/XXX) \n  File name format: ClassRoll_Name_article.docx (Example: CSE2021/057_HadiAhmed_article.docx). \n  Maximum of 2 articles are allowed per person. \n  Last date of submission 20th September, 2023 till 12:30 PM.",
@@ -95,9 +245,28 @@ export const NontechEvents = [
     imgUrl: article,
     description: "Sept 7-8",
     hasForm: true,
+    winning: [
+      {
+        category: "",
+        winners: [
+          {
+            position: "1st",
+            name: "Sambhabi Das, 2nd Year, CSE",
+          },
+          {
+            position: "2nd",
+            name: "Rwitam Ray, 2nd Year, CSE",
+          },
+          {
+            position: "3rd",
+            name: "Gourav Bhadra, 3rd Year, CSE",
+          },
+        ],
+      },
+    ],
   },
   {
-    title: "Poetry",
+    title: "Wall (Poetry)",
     info: "“Poetry is the spontaneous overflow of powerful feelings: it takes its origin from emotion recollected in tranquility.” --  William Wordsworth🌼",
     rules:
       "No plagiarism is allowed. \n  The submitted poem must be an original creation of the writer. \n  The poem must not infringe on any copyright or intellectual property rights of others. \n  Writer may submit up to 1 or 2 poetry per submission. \n  The poem should be suitable for public display, as it will be showcased in a communal space. \n  Poem must not contain offensive, explicit, or inappropriate content. \n  It should be completed within 20 lines. \n  File should be uploaded in .docx or .txt file no .pdf file will be entertained \n  The upload of the poem as a pdf is compulsory. \n  Written poems must be submitted physically  to the junior coordinator by 20th of September,12:00pm.",
@@ -106,6 +275,25 @@ export const NontechEvents = [
     imgUrl: poetry,
     description: "Sept 7-8",
     hasForm: true,
+    winning: [
+      {
+        category: "",
+        winners: [
+          {
+            position: "1st",
+            name: "Soham Banerjee [CSE 1st year] ",
+          },
+          {
+            position: "2nd",
+            name: "Ishita Saha[CSE 1st year] & Shibangi Chatterjee [CSE 2nd year] ",
+          },
+          {
+            position: "3rd",
+            name: "Harsh Prakash [CSE 2nd year] & Satwik Das [CSE 3rd year]",
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Shutterbugs",
@@ -120,24 +308,92 @@ export const NontechEvents = [
     imgUrl: shutterbugs,
     description: "Sept 7-8",
     hasForm: true,
+    winning: [
+      {
+        category: "",
+        winners: [
+          {
+            position: "1st",
+            name: "Aishik das [CSE 3rd Year]",
+          },
+          {
+            position: "2nd",
+            name: "Ankita Paul [CSE 3rd Year]",
+          },
+          {
+            position: "3rd",
+            name: "Sandip mondal [CSE 3rd Year]",
+          },
+          {
+            position: "4th",
+            name: "Kristi Majumder [CSE 3rd Year]",
+          },
+          {
+            position: "5th",
+            name: "Samanway Mondal [CSE 1st Year]",
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Extempore",
-    rules: "1. There are two categories technical and non-technical. The participant will choose their category of choice [either technical or non-technical] \n 2. Then the participant will select their topic following the lottery system [Will pick a chit containing a number.] the participant will speak on the topic respective to the number on the chit they selected. \n 3. The participant will be allowed to change topic only once. But must chose the topic based on lottery system again. \n 4. The time limit will be up to 2min maximum.The next 1 min will be open for questionnaire.Other contestants may ask questions based on the speech they just heard.Only one question will be entertained., \n 5. The decision of the Judges regarding the performances of the contestants will be considered as final. \n 6. The contestant will be given 1 minute to prepare after topic selection.Within this time resources like the internet may be referred to.But during the final speech the contestant shall not be allowed to refer to any material.They are expected to speak from memory only.",
+    rules:
+      "1. There are two categories technical and non-technical. The participant will choose their category of choice [either technical or non-technical] \n 2. Then the participant will select their topic following the lottery system [Will pick a chit containing a number.] the participant will speak on the topic respective to the number on the chit they selected. \n 3. The participant will be allowed to change topic only once. But must chose the topic based on lottery system again. \n 4. The time limit will be up to 2min maximum.The next 1 min will be open for questionnaire.Other contestants may ask questions based on the speech they just heard.Only one question will be entertained., \n 5. The decision of the Judges regarding the performances of the contestants will be considered as final. \n 6. The contestant will be given 1 minute to prepare after topic selection.Within this time resources like the internet may be referred to.But during the final speech the contestant shall not be allowed to refer to any material.They are expected to speak from memory only.",
     imgUrl: extempore,
     description: "Sept 7-8",
     coordinators:
       "Coordinators: \n URBI CHAKROBORTY: 98753 92898 \n SUHANI SAHA: 84788 68744 \n SOUHARDDA RAJ SARKAR: 94776 32433 \n SHIBANGI CHATTERJEE: 87777 539361 \n KALPA DAS: 62902 71947",
+    winning: [
+      {
+        category: "",
+        winners: [
+          {
+            position: "1st",
+            name: "Sagnik Datta (CSE 2nd Year)",
+          },
+          {
+            position: "2nd",
+            name: "Ankit Kumar (CSE 3rd Year) & Asmita Pramanik (CSE 1st Year) ",
+          },
+          {
+            position: "3rd",
+            name: "Jyotiska Ghosh (CSE 1st Year)",
+          },
+        ],
+      },
+    ],
   },
+
   {
-    title: "QuizTime",
+    title: "Quiz Time",
     info: "Knowledge is not merely acquired; it is the treasure-house from which we draw our \n hightest dreams and our boldest accomplishments. – Dr. A.P.J. Abdul Kalam",
 
-    rules: "RULES: \n 1. Participants will have to participate in teams of 2 members each.  Participants must register themselves prior to the event. No new registration will be entertained after the commencement of the event. No member of a team can simultaneously be a member of another team. This will be treated as malpractice and may lead to disqualification. \n 2. The contest will be divided into prelims and finals. \n 3. The top 6 teams will qualify for the finals from the prelims. \n 4. Prelims: \n The prelims will be of 26 questions in A-to-Z format (i.e., the starting letters of the answers will be in A-to-Z sequence)· The time duration for each question will be 30 seconds after the question has been fully read out by the quizmaster. Questions may be descriptive or MCQs. \n 5. Finals: \n The finals will be of several rounds, including pounce and bounce, connections, and audio-visual rounds. \n  Pounce: You can attempt a question out of turn. There will be virtual buzzers made available for the team, the first team to press ‘pounces’ on the question. If the answer is incorrect the team gets a negative marking. No challenges can be made. \n        Bounce: It’s the regular round where a team gets a question and passes on if they cannot answer it. There are no negative markings on passing the answers. However, challenging is available using the buzzer system, and failing to give the correct answer after the challenge will attract a negative marking. \n ·        Connections: The quizmaster will give a clue and the team has to answer the question. \n·        Audio-visual: The quizmaster will play a video or audio clip and the team has to answer the question. If you shout out the answers out of your turn negative marking will be awarded. \n 6. Good sportsmanship and respectful behaviour among participants and the audience is always encouraged.  Any form of cheating or malpractice will not be tolerated and will lead to immediate disqualification. Organizers retain the right to disqualify any participant on suspicion of cheating or not adhering to the rules. \n 7. Individual details and rules for each round of Prelims and Finals, the marking scheme, tiebreaker rules, and all other necessary information would be declared prior to the event. \n 8. Organizers’ decision is the final decision regarding the event and its management.  In case of any dispute regarding the questions and answers, the question can be replaced by the organizers. In case of any technical issue, alternative solutions will be provided as per the organizers’ decision",
+    rules:
+      "RULES: \n 1. Participants will have to participate in teams of 2 members each.  Participants must register themselves prior to the event. No new registration will be entertained after the commencement of the event. No member of a team can simultaneously be a member of another team. This will be treated as malpractice and may lead to disqualification. \n 2. The contest will be divided into prelims and finals. \n 3. The top 6 teams will qualify for the finals from the prelims. \n 4. Prelims: \n The prelims will be of 26 questions in A-to-Z format (i.e., the starting letters of the answers will be in A-to-Z sequence)· The time duration for each question will be 30 seconds after the question has been fully read out by the quizmaster. Questions may be descriptive or MCQs. \n 5. Finals: \n The finals will be of several rounds, including pounce and bounce, connections, and audio-visual rounds. \n  Pounce: You can attempt a question out of turn. There will be virtual buzzers made available for the team, the first team to press ‘pounces’ on the question. If the answer is incorrect the team gets a negative marking. No challenges can be made. \n        Bounce: It’s the regular round where a team gets a question and passes on if they cannot answer it. There are no negative markings on passing the answers. However, challenging is available using the buzzer system, and failing to give the correct answer after the challenge will attract a negative marking. \n ·        Connections: The quizmaster will give a clue and the team has to answer the question. \n·        Audio-visual: The quizmaster will play a video or audio clip and the team has to answer the question. If you shout out the answers out of your turn negative marking will be awarded. \n 6. Good sportsmanship and respectful behaviour among participants and the audience is always encouraged.  Any form of cheating or malpractice will not be tolerated and will lead to immediate disqualification. Organizers retain the right to disqualify any participant on suspicion of cheating or not adhering to the rules. \n 7. Individual details and rules for each round of Prelims and Finals, the marking scheme, tiebreaker rules, and all other necessary information would be declared prior to the event. \n 8. Organizers’ decision is the final decision regarding the event and its management.  In case of any dispute regarding the questions and answers, the question can be replaced by the organizers. In case of any technical issue, alternative solutions will be provided as per the organizers’ decision",
     coordinators:
       "Coordinators \n Atalanta Dey : +9163175925 \n Subhadip Biswas: +91 744 966 2371 \n  Rachita Basu: +91 912 370 2522 \n  Rwitam Ray (2nd year): +91 900 761 4799 \n  Shreya Dutta (2nd year): +91 858 495 3575",
     imgUrl: quiz,
     description: "Sept 7-8",
+    winning: [
+      {
+        category: "",
+        winners: [
+          {
+            position: "1st",
+            name: "Team T-Scale : Pronay Debnath & Akash Saha ",
+          },
+          {
+            position: "2nd",
+            name: "Team Back Benchers : Alimpan De & Rohit Roy ",
+          },
+          {
+            position: "3rd",
+            name: "Team Knowledge Ninjas : Anamitra Sengupta & Srijan Mondal",
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Reel Lens",
@@ -152,6 +408,25 @@ export const NontechEvents = [
     imgUrl: reel,
     description: "Sept 7-8",
     hasForm: true,
+    winning: [
+      {
+        category: "",
+        winners: [
+          {
+            position: "1st",
+            name: "Kristi Majumder, 3rd Year, CSE",
+          },
+          {
+            position: "2nd",
+            name: "Chandrima Ghosh, 1st Year, CSE  &  Atalanta Dey, 3rd Year, CSE",
+          },
+          {
+            position: "3rd",
+            name: "Sattamedha Chowdhury, 1st Year, CSE AI ML",
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Spell Bee",
@@ -161,5 +436,41 @@ export const NontechEvents = [
     description: "Sept 7-8",
     coordinators:
       "Coordinators: \n SRIJAN MONDAL: +91 62943 29864 \n SHREYA SARKAR:+91 90735 52519 \n ADRITA CHAKRABORTY: +91 70031 59819 \n DEBOPARNA BHATTACHARJEE: +91 86975 79091",
+    winning: [
+      {
+        category: "Junior",
+        winners: [
+          {
+            position: "1st",
+            name: "Oindree Maity (CSE 1st year) ",
+          },
+          {
+            position: "2nd",
+            name: "Shrijita Mondal (CSE 1st year) ",
+          },
+          {
+            position: "3rd",
+            name: "Tirtha Bhattacharya (ECE 1st year)",
+          },
+        ],
+      },
+      {
+        category: "Senior",
+        winners: [
+          {
+            position: "1st",
+            name: "Soumyadeep Chakraborty (CSE 3rd year) ",
+          },
+          {
+            position: "2nd",
+            name: "Pronay Debnath (IT 3rd year) ",
+          },
+          {
+            position: "3rd",
+            name: "Saraseej De (CSE 2nd year)",
+          },
+        ],
+      },
+    ],
   },
 ];

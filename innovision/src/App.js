@@ -19,8 +19,10 @@ function App() {
         <Banner />
         <Gallery />
         <Events />
+
         <Contact />
         <Footer />
+
         <Toaster position="top-center" reverseOrder={false} />
       </div>
     </>
