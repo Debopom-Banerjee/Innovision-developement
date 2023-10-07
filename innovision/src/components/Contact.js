@@ -44,10 +44,10 @@ export const Contact = () => {
                 <h1> Shauryam Dubey : </h1>
                 <h1>+91 6203940031</h1>
               </div>
-              <div className="flex flex-wrap techteam font-medium text-lg">
+              {/* <div className="flex flex-wrap techteam font-medium text-lg">
                 <h1> Soumyaraj Bag : </h1>
                 <h1>+91 8337045160</h1>
-              </div>
+              </div> */}
             </div>
           </Col>
         </Row>
