@@ -318,15 +318,11 @@ export const NontechEvents = [
           },
           {
             position: "2nd",
-            name: "Ankita Paul [CSE 3rd Year]",
+            name: "Ankita Paul [CSE 3rd Year] & Sandip mondal [CSE 3rd Year]",
           },
           {
             position: "3rd",
-            name: "Sandip mondal [CSE 3rd Year] & Kristi Majumder [CSE 3rd Year]",
-          },
-          {
-            position: "4th",
-            name: "Samanway Mondal [CSE 1st Year]",
+            name: "Kristi Majumder [CSE 3rd Year] & Samanway Mondal [CSE 1st Year]",
           },
         ],
       },
